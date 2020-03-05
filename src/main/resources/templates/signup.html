@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Signup</title>
+    <link rel="stylesheet" href="https://notendur.hi.is/~hfg7/freyr2/src/main/resources/templates/homeStyle.css">
+</head>
+
+<body>
+
+<h1>Sign Up</h1>
+<div class="takkar">
+    <button class="button">
+        <a href="/"><span>Home</span></a>
+    </button>
+
+    <button class="button">
+        <a href="/login"><span>Login</span></a>
+    </button>
+</div>
+<h2>Please fill in this form to create an account</h2>
+
+<div class="form">
+    <form class="upp" action="#" th:action="@{/signup}" th:object="${user}" method="post">
+        User Name: <br>
+        <input type="text" name="userName" id="userName" th:field="*{userName}"/><br>
+        Password: <br>
+        <input type="text" name="password" id="password" th:value="*{password}"/><br>
+        Email: <br>
+        <input type="text" name="email" id="email" th:value="*{email}"/><br>
+
+        <div th:switch="${message}">
+            <p class="alert" th:case="*" th:text="${message}"></p>
+        </div>
+
+            <input class="button" type="submit" value="Sign up"/>
+    </form>
+</div>
+
+</body>
+
+</html>
