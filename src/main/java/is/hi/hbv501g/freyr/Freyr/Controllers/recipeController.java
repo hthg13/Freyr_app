@@ -7,23 +7,19 @@ import is.hi.hbv501g.freyr.Freyr.Services.RecipeService;
 import is.hi.hbv501g.freyr.Freyr.Services.UserService;
 import is.hi.hbv501g.freyr.Freyr.Utilities.addListsToModel;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
+import org.springframework.http.HttpStatus;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.validation.BindingResult;
 import is.hi.hbv501g.freyr.Freyr.Utilities.AlertsToUser;
+import org.springframework.web.server.ResponseStatusException;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
-@Controller
+@RestController
 public class recipeController {
 
     private RecipeService recServ;
@@ -37,14 +33,14 @@ public class recipeController {
     }
 
     // sets up the basic home page
+    //REST
     @RequestMapping("/")
-    public String Home(Model model, HttpSession session){
+    public Object Home(HttpSession session){
         if(session.getAttribute("LoggedInUser") != null){
-            model.addAttribute("loggedinuser",session.getAttribute("LoggedInUser"));
-            return "home";
+            return session.getAttribute("LoggedInUser");
         }
-        model.addAttribute("loggedinuser", null);
-        return "home";
+        else
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST,"Not logged in");
     }
 
     // shows in detail the recipe that was clicked
@@ -70,14 +66,14 @@ public class recipeController {
     // if the user wishes to save the recipe to favorites
     // the method will save that recipe and it will be
     // accessible in a list of the users favorite recipes
+    //REST
     @RequestMapping(value="/recipe", method=RequestMethod.POST)
-    public String addToFavorites(@Valid Recipe recipe, BindingResult result, Model model, HttpSession session)  {
+    public Recipe addToFavorites(@Valid @RequestBody Recipe recipe, BindingResult result, HttpSession session)  {
         // get the session user (the logged in user)
         User sessionUser = (User) session.getAttribute("LoggedInUser");
 
         // notify the user if not logged in
         String message = alertsToUser.messageLogin(sessionUser);
-        model.addAttribute("message", message);
 
         // if user is logged in and has not saved the recipe to favorites already
         // we add the recipe to favorites
@@ -85,7 +81,7 @@ public class recipeController {
             recipe = recServ.getSelectedRecipe();
 
             if(result.hasErrors()){
-                return "recipe";
+                throw new ResponseStatusException(HttpStatus.BAD_REQUEST,message)
             }
 
             boolean alreadySaved = false;
@@ -103,14 +99,13 @@ public class recipeController {
 
             Recipe exists = recServ.findById(recipe.getId());
             if (exists == null) {                                                       // if recipe does not exist in recipe database
-                recipe = recServ.save(recipe);                                          // add recipe to recipe database
+                return recServ.save(recipe);                                          // add recipe to recipe database
             }
-            // setup the recipe for html
-            model.addAttribute("recipe", recipe);
+            else
+                throw new ResponseStatusException(HttpStatus.ALREADY_REPORTED, "already saved")
         }
-
-        // redirect to the recipe page
-        return "redirect:/recipe";
+        else
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST,message)
     }
 
     // býr til gerfi recipe hlut

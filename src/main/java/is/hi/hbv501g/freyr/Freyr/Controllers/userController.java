@@ -6,18 +6,18 @@ import is.hi.hbv501g.freyr.Freyr.Services.RecipeService;
 import is.hi.hbv501g.freyr.Freyr.Services.UserService;
 import is.hi.hbv501g.freyr.Freyr.Utilities.AlertsToUser;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
+import org.springframework.http.HttpStatus;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.util.ArrayList;
+import java.util.List;
 
-@Controller
+@RestController
 public class userController {
 
     private UserService userService;
@@ -41,13 +41,12 @@ public class userController {
         return "home";
     }
     /**
-     * @param model
      * @return redirects to user page where all users can be seen
      */
+    //REST
     @RequestMapping("/user")
-    public String User(Model model) {
-        model.addAttribute("users", userService.findAll());
-        return "user";
+    public List<User> User(Model model) {
+        return userService.findAll();
     }
 
 
@@ -57,7 +56,7 @@ public class userController {
      * @param user
      * @return redirects to home page
      */
-    @RequestMapping(value = "/signup", method = RequestMethod.GET)
+    /*@RequestMapping(value = "/signup", method = RequestMethod.GET)
     public String signUpGET(User user, HttpSession session){
         if(session.getAttribute("LoggedInUser") != null){
             return "redirect:/";
@@ -67,46 +66,33 @@ public class userController {
         }
 
     }
-
+*/
     // sign up page
+    //REST
     @RequestMapping(value = "/signup", method = RequestMethod.POST)
-    public String signUpPOST(@Valid User user, BindingResult result, Model model){
+    public User signUpPOST(@Valid @RequestBody User user, BindingResult result){
         if(result.hasErrors()){
-            return "signup";
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST,"Invalid user")
         }
 
         String message = "Username already exists";
         User exists = userService.findByUserName(user.getUserName());
 
         if(exists == null){
-            model.addAttribute("recipes",recipeService.findAll());
-            userService.save(user);
-            return "redirect:/";
+            return userService.save(user);
         }
-
-        model.addAttribute("message", message);
-        return "signup";
-    }
-
-    // login page setup
-    @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public String loginGET(User user,  HttpSession session){
-
-        if(session.getAttribute("LoggedInUser") != null){
-            return "redirect:/";
-        }
-        else {
-            return "login";
-        }
+        else
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, message)
     }
 
     // identifies the user if exists and returns to home page
     // else shows a message to the user informing him about the error
+    //rest
     @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public String loginPOST(@Valid User user, BindingResult result, Model model, HttpSession session){
+    public User loginPOST(@Valid @RequestBody User user, BindingResult result, HttpSession session){
 
         if(result.hasErrors()){
-            return "login";
+            throw new ResponseStatusException()
         }
 
         String message = "Incorrect user information or user does not exist";
@@ -114,25 +100,27 @@ public class userController {
 
         if (exists != null) {
             user = userService.findByUserName(user.getUserName());
-            model.addAttribute("recipes",recipeService.findAll());
             session.setAttribute("LoggedInUser", user);
-            return "redirect:/";
+            return exists
         }
-
-        model.addAttribute("message", message);
-        return "login";
+        else
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST,message)
     }
+
+
+
 
     // todo remove this method
     // shows the user name of the user that is logged in
+    //REST
     @RequestMapping(value = "/loggedin", method = RequestMethod.GET)
-    public String loggedinGET(HttpSession session, Model model){
+    public User loggedinGET(HttpSession session){
         User sessionUser = (User) session.getAttribute("LoggedInUser");
         if(sessionUser != null){
-            model.addAttribute("loggedinuser", sessionUser);
-            return "loggedInUser";
+            return sessionUser;
         }
-        return "home";
+        else
+            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED,"you have to be logged in");
     }
 
     // sets up the user profile
