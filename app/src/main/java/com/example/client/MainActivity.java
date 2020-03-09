@@ -1,6 +1,12 @@
 package com.example.client;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
+import com.example.client.ui.Activities.CookBookActivity;
+import com.example.client.ui.Activities.CreateRecipeActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
@@ -23,6 +29,29 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
+
+
+        //
+        // Til að geta prófað cookbook og create
+        //
+
+        Button button = (Button)findViewById(R.id.temp);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent cookbook = new Intent(MainActivity.this, CookBookActivity.class);
+                MainActivity.this.startActivity(cookbook);
+            }
+        });
+
+        Button button2 = (Button)findViewById(R.id.temp2);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent create = new Intent(MainActivity.this, CreateRecipeActivity.class);
+                MainActivity.this.startActivity(create);
+            }
+        });
     }
 
 }
