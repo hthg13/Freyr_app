@@ -9,9 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.Activities.RecipeViewActivity"></activity>
-        <activity android:name=".ui.Activities.CookBookActivity" />
-        <activity android:name=".ui.Activities.CreateRecipeActivity" />
+        <activity
+            android:name=".ui.Activities.RecipeViewActivity"
+            android:label="@string/title_recipe" ></activity>
+        <activity
+            android:name=".ui.Activities.CookBookActivity"
+            android:label="@string/title_cookbook"/>
+        <activity
+            android:name=".ui.Activities.CreateRecipeActivity"
+            android:label="@string/title_create_recipe"/>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name">
