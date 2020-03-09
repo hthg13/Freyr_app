@@ -33,12 +33,22 @@
         app:navGraph="@navigation/mobile_navigation"
     />
 
-    <Button
-        android:id="@+id/temp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Timabundið Test"
-        tools:layout_editor_absoluteX="68dp"
-        tools:layout_editor_absoluteY="121dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/temp2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tímabundinn CreateRec" />
+
+        <Button
+            android:id="@+id/temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Timabundinn CookBook" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

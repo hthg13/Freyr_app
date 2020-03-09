@@ -16,7 +16,7 @@ import com.example.client.ui.Activities.RecipeViewActivity;
 
 import java.util.ArrayList;
 
-public class RecyclerAdapterSearch extends RecyclerView.Adapter<RecyclerAdapterSearch.RecipeViewHolder> {
+public class RecyclerAdapterCookBook extends RecyclerView.Adapter<RecyclerAdapterCookBook.RecipeViewHolder> {
 
     private ArrayList<String>/*<Recipes>*/ recipes;
     // images fæst úr recipes arraylist þegar Recipe Object er tilbúinn
@@ -24,7 +24,7 @@ public class RecyclerAdapterSearch extends RecyclerView.Adapter<RecyclerAdapterS
 
     private Context context;
 
-    public RecyclerAdapterSearch(ArrayList<String>/*<Recipes>*/ r, int[] i, Context c) {
+    public RecyclerAdapterCookBook(ArrayList<String>/*<Recipes>*/ r, int[] i, Context c) {
         recipes = r;
         images = i;
         context = c;
@@ -33,15 +33,14 @@ public class RecyclerAdapterSearch extends RecyclerView.Adapter<RecyclerAdapterS
     public static class RecipeViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         // each data item is just a string in this case
         TextView title;
-        ImageView image;
         Context context;
         ArrayList<String> recipes;
         int[] images;
 
         public RecipeViewHolder(View v, Context c, ArrayList<String>/*<Recipes>*/ r, int[] i) {
             super(v);
-            image = v.findViewById(R.id.vmynd);
-            title = v.findViewById(R.id.vtitle);
+
+            title = v.findViewById(R.id.cbTitle);
             itemView.setOnClickListener(this);
 
             this.context = c;
@@ -61,10 +60,10 @@ public class RecyclerAdapterSearch extends RecyclerView.Adapter<RecyclerAdapterS
 
     @NonNull
     @Override
-    public RecyclerAdapterSearch.RecipeViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public RecyclerAdapterCookBook.RecipeViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.recipe_view_layout, parent, false);
+                .inflate(R.layout.text_view_layout, parent, false);
 
         RecipeViewHolder vh = new RecipeViewHolder(view, context, recipes, images);
 
@@ -73,9 +72,9 @@ public class RecyclerAdapterSearch extends RecyclerView.Adapter<RecyclerAdapterS
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerAdapterSearch.RecipeViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull RecyclerAdapterCookBook.RecipeViewHolder holder, int position) {
         holder.title.setText(recipes.get(position));
-        holder.image.setImageResource(images[position]);
+
 
         /*
         holder.image.setImageResource(recipes.get(position).getImage();
