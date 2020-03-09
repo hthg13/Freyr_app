@@ -7,7 +7,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 
 import com.example.client.R;
-import com.example.client.ui.Activities.Adapters.RecyclerAdapter;
+import com.example.client.ui.Activities.Adapters.RecyclerAdapterCookBook;
+import com.example.client.ui.Activities.Adapters.RecyclerAdapterSearch;
 
 import java.util.ArrayList;
 
@@ -38,7 +39,7 @@ public class CookBookActivity extends AppCompatActivity {
         a.add("Lasagna");
         a.add("Burger");
 
-        mAdapter = new RecyclerAdapter(a,myndir,this);
+        mAdapter = new RecyclerAdapterCookBook(a,myndir,this);
         recyclerView.setAdapter(mAdapter);
     }
 }
