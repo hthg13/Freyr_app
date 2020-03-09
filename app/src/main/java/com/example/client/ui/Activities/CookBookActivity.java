@@ -38,7 +38,7 @@ public class CookBookActivity extends AppCompatActivity {
         a.add("Lasagna");
         a.add("Burger");
 
-        mAdapter = new RecyclerAdapter(a,myndir);
+        mAdapter = new RecyclerAdapter(a,myndir,this);
         recyclerView.setAdapter(mAdapter);
     }
 }
