@@ -19,8 +19,6 @@ import androidx.navigation.ui.NavigationUI;
 
 public class MainActivity extends AppCompatActivity {
 
-    // private static final String LOG_TAG = "HelgaDebug";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,8 +56,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // prófa user entity
-        // Log.d(MainActivity.LOG_TAG, User.getString());
     }
 
 }
