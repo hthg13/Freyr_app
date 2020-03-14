@@ -2,9 +2,12 @@ package com.example.client;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Message;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.client.entities.User;
 import com.example.client.ui.Activities.CookBookActivity;
 import com.example.client.ui.Activities.CreateRecipeActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -15,6 +18,8 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 public class MainActivity extends AppCompatActivity {
+
+    // private static final String LOG_TAG = "HelgaDebug";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +57,9 @@ public class MainActivity extends AppCompatActivity {
                 MainActivity.this.startActivity(create);
             }
         });
+
+        // prófa user entity
+        // Log.d(MainActivity.LOG_TAG, User.getString());
     }
 
 }
