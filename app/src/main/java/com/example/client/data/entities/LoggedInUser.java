@@ -1,4 +1,4 @@
-package com.example.client.data.model;
+package com.example.client.data.entities;
 
 /**
  * Data class that captures user information for logged in users retrieved from LoginRepository

@@ -1,6 +1,6 @@
 package com.example.client.data;
 
-import com.example.client.data.model.LoggedInUser;
+import com.example.client.data.entities.LoggedInUser;
 
 /**
  * Class that requests authentication and user information from the remote data source and

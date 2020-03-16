@@ -2,7 +2,7 @@ package com.example.client.data;
 
 import android.util.Log;
 
-import com.example.client.data.model.LoggedInUser;
+import com.example.client.data.entities.LoggedInUser;
 
 import java.io.IOException;
 

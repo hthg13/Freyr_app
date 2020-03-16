@@ -1,17 +1,12 @@
 package com.example.client;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Message;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.client.entities.User;
 import com.example.client.ui.Activities.CookBookActivity;
 import com.example.client.ui.Activities.CreateRecipeActivity;
-import com.example.client.ui.Activities.LogInActivity;
 import com.example.client.ui.login.LoginActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import androidx.appcompat.app.AppCompatActivity;
