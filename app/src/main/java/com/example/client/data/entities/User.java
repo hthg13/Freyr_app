@@ -14,6 +14,12 @@ public class User {
     private Schedule mSchedule;
     private ShoppingList mShoppingList;
 
+
+    public User(long id, String userName) {
+        this.mId = id;
+        this.mUserName = userName;
+    }
+
     public long getId() {
         return mId;
     }
