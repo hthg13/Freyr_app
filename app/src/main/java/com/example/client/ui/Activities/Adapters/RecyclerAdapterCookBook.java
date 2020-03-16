@@ -12,32 +12,36 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.client.R;
+import com.example.client.entities.Recipe;
 import com.example.client.ui.Activities.RecipeViewActivity;
 
 import java.util.ArrayList;
 
 public class RecyclerAdapterCookBook extends RecyclerView.Adapter<RecyclerAdapterCookBook.RecipeViewHolder> {
 
-    private ArrayList<String>/*<Recipes>*/ recipes;
+    private ArrayList<Recipe> recipes;
     // images fæst úr recipes arraylist þegar Recipe Object er tilbúinn
-    private int[] images;
+    private String[] images;
 
     private Context context;
 
-    public RecyclerAdapterCookBook(ArrayList<String>/*<Recipes>*/ r, int[] i, Context c) {
+    public RecyclerAdapterCookBook(ArrayList<Recipe>r, Context c) {
         recipes = r;
-        images = i;
         context = c;
+        images = new String[r.size()];
+        for(int i=0; i<r.size(); i++){
+            images[i]=r.get(i).getImage();
+        }
     }
 
     public static class RecipeViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         // each data item is just a string in this case
         TextView title;
         Context context;
-        ArrayList<String> recipes;
-        int[] images;
+        ArrayList<Recipe> recipes;
+        String[] images;
 
-        public RecipeViewHolder(View v, Context c, ArrayList<String>/*<Recipes>*/ r, int[] i) {
+        public RecipeViewHolder(View v, Context c, ArrayList<Recipe> r, String[] i) {
             super(v);
 
             title = v.findViewById(R.id.cbTitle);
@@ -52,7 +56,7 @@ public class RecyclerAdapterCookBook extends RecyclerView.Adapter<RecyclerAdapte
         public void onClick(View v) {
             Intent recipeViewIntent= new Intent(this.context, RecipeViewActivity.class);
             recipeViewIntent.putExtra("recipeImage", images[getAdapterPosition()]);
-            recipeViewIntent.putExtra("recipeTitle", recipes.get(getAdapterPosition()));
+            recipeViewIntent.putExtra("recipeTitle", recipes.get(getAdapterPosition()).getTitle());
             this.context.startActivity(recipeViewIntent);
         }
     }
@@ -73,12 +77,12 @@ public class RecyclerAdapterCookBook extends RecyclerView.Adapter<RecyclerAdapte
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerAdapterCookBook.RecipeViewHolder holder, int position) {
-        holder.title.setText(recipes.get(position));
+        holder.title.setText(recipes.get(position).getTitle());
 
 
         /*
         holder.image.setImageResource(recipes.get(position).getImage();
-         */
+        */
     }
 
     @Override
