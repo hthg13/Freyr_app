@@ -7,6 +7,7 @@ import android.widget.Button;
 
 import com.example.client.ui.Activities.CookBookActivity;
 import com.example.client.ui.Activities.CreateRecipeActivity;
+import com.example.client.ui.Activities.SearchActivity;
 import com.example.client.ui.login.LoginActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import androidx.appcompat.app.AppCompatActivity;
@@ -48,6 +49,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent create = new Intent(MainActivity.this, CreateRecipeActivity.class);
+                MainActivity.this.startActivity(create);
+            }
+        });
+
+        Button button3 = (Button)findViewById(R.id.temp3);
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent create = new Intent(MainActivity.this, SearchActivity.class);
                 MainActivity.this.startActivity(create);
             }
         });

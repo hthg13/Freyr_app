@@ -17,11 +17,5 @@ public class RecipeViewActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipe_view);
-
-        imageView = findViewById(R.id.recipeImage);
-        textView = findViewById(R.id.recipeTitle);
-
-        imageView.setImageResource(getIntent().getIntExtra("recipeImage",0));
-        textView.setText(getIntent().getCharSequenceExtra("recipeTitle"));
     }
 }
