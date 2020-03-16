@@ -1,4 +1,8 @@
-package com.example.client.entities;
+package com.example.client.data.entities;
+
+import com.example.client.data.entities.CookBook;
+import com.example.client.data.entities.Schedule;
+import com.example.client.data.entities.ShoppingList;
 
 public class User {
 
