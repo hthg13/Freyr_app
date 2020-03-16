@@ -3,7 +3,23 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+<<<<<<< HEAD
     <string name="title_cookbook">Cookbook</string>
     <string name="title_create_recipe">Create Recipe</string>
     <string name="title_recipe">Recipe</string>
+=======
+
+    <!-- Log in, sign up and user strings -->
+    <string name="title_login">Log In</string>
+    <string name="title_signup">Sign Up</string>
+    <string name="username">Username:</string>
+    <string name="password">Password:</string>
+    <string name="repeatPassword">Repeat Password:</string>
+    <string name="submitLogIn">Log In</string>
+    <string name="submitSignUp">Sign Up</string>
+    <string name="noAccount">Do not have an account? Sign in here</string>
+    <string name="title_profile">Profile</string>
+    <string name="logout">Log out</string>
+
+>>>>>>> 42a07e4487f6ddbf1138ca42027199dec40ea404
 </resources>
