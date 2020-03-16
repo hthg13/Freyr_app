@@ -32,12 +32,14 @@ public class RecipeViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipe_view);
 
+
         imageView = findViewById(R.id.recipeImage);
         textView = findViewById(R.id.recipeTitle);
 
         String s = getIntent().getStringExtra("recipeImage");
         setImageView(s);
         textView.setText(getIntent().getCharSequenceExtra("recipeTitle"));
+
     }
 
 

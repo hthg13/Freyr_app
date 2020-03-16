@@ -1,4 +1,8 @@
-package com.example.client.entities;
+package com.example.client.data.entities;
+
+import com.example.client.data.entities.CookBook;
+import com.example.client.data.entities.Schedule;
+import com.example.client.data.entities.ShoppingList;
 
 public class User {
 
@@ -9,6 +13,12 @@ public class User {
     private CookBook mCookbook;
     private Schedule mSchedule;
     private ShoppingList mShoppingList;
+
+
+    public User(long id, String userName) {
+        this.mId = id;
+        this.mUserName = userName;
+    }
 
     public long getId() {
         return mId;
