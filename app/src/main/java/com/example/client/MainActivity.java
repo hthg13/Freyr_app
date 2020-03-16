@@ -21,7 +21,7 @@ import androidx.navigation.ui.NavigationUI;
 public class MainActivity extends AppCompatActivity {
 
     // TODO: remove
-    private static final String LOG_TAG = "Helga";
+    private static final String LOG_TAG = "Helga"; //hmmm
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +53,8 @@ public class MainActivity extends AppCompatActivity {
                 MainActivity.this.startActivity(create);
             }
         });
+    
+        //gera til að prófa search
 
         // TODO: remove
         Log.d(MainActivity.LOG_TAG, LogInActivity.testLoginActivity());
