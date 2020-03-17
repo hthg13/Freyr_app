@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Logged In User</title>
+</head>
+<body>
+
+    <h1>Logged in User</h1>
+
+    <div>
+        <button>
+            <a href="/">Home</a>
+        </button>
+    </div>
+
+    <p th:text="${loggedinuser.userName}"></p>
+    <p th:text="${loggedinuser.Id}"></p>
+    <p th:text="${loggedinuser.email}"></p>
+    <p th:text="${loggedinuser.favorite}"></p>
+
+</body>
+</html>

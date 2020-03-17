@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="https://thymeleaf.org">
+<link rel="stylesheet" href="https://notendur.hi.is/~hfg7/freyr2/src/main/resources/templates/homeStyle.css">
+<head>
+    <meta charset="UTF-8">
+    <title>Freyr</title>
+
+
+</head>
+<body>
+<h1>Freyr</h1>
+
+<div class="takkar">
+    <button class="button">
+        <a href="/"><span>Home</span></a>
+    </button>
+</div>
+
+<h2>Search by ingredients</h2>
+<form action="#" th:action="@{/ingredientSearch}"  method="post">
+    <div class="ingrd">
+        <h3>Vegetables</h3>
+        <div>
+            <input type="checkbox" name="vegetables" th:text="${veget} " th:value="${veget}" th:each="veget : ${vegetables}"/>
+        </div>
+        <h3>Fruits</h3>
+        <div>
+            <input type="checkbox" name="fruits" th:text="${fruit} " th:value="${fruit}" th:each="fruit : ${fruits}"/>
+        </div>
+        <h3>Dairy and alternatives</h3>
+        <div>
+            <input type="checkbox" name="dairyAndAlternatives" th:text="${dairy} " th:value="${dairy}" th:each="dairy : ${dairyAndAlternatives}"/>
+        </div>
+        <h3>Meats</h3>
+        <div>
+            <input type="checkbox" name="meats" th:text="${meat} " th:value="${meat}" th:each="meat : ${meats}"/>
+        </div>
+        <h3>Fish and seafood</h3>
+        <div>
+            <input type="checkbox" name="seafoodAndFish" th:text="${fish} " th:value="${fish}" th:each="fish : ${seafoodAndFish}"/>
+        </div>
+        <h3>Nuts</h3>
+        <div>
+            <input type="checkbox" name="nuts" th:text="${nut} " th:value="${nut}" th:each="nut : ${nuts}"/>
+        </div>
+        <h3>Grains and baking</h3>
+        <div>
+            <input type="checkbox" name="grainsAndBaking" th:text="${grain} " th:value="${grain}" th:each="grain : ${grainsAndBaking}"/>
+        </div>
+        <h3>Sweets</h3>
+        <div>
+            <input type="checkbox" name="sweets" th:text="${sweet} " th:value="${sweet}" th:each="sweet : ${sweets}"/>
+        </div>
+
+    </div>
+
+        <div>
+            <input class="button" type="submit" value="IngredientSearch"/>
+        </div>
+
+
+    <div th:switch="${recipes}">
+        <h1>Recipes</h1>
+        <h2 th:case="null">No results!</h2>
+        <h2 th:case="-1">No recipes found, please try again</h2>
+        <div th:case="*">
+            <table>
+                <thead>
+                <tr>
+                    <th>Title</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="recipe : ${recipes}">
+                    <td id="title" th:text="${recipe.title}"></td>
+                    <td><img th:src="${recipe.image}" width="300px" height="300px"></td>
+                    <td>
+                        <button  name="index" id ="index" th:value="${recipe.index}"/>Look At Recipe</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</form>
+
+</body>
+</html>
