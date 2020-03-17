@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Favorite recipes</title>
+    <link rel="stylesheet" href="homeStyle.css">
+</head>
+<body>
+
+<h1>Favorite recipe</h1>
+
+<div class="takkar">
+    <button class="button">
+        <a href="/"><span>Home</span></a>
+    </button>
+</div>
+
+<div th:switch="${recipes}">
+
+    <h2 th:case="null">No favorites yet!</h2>
+    <div th:case="*">
+        <h2>Recipe</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>title</th>
+                <th>id</th>
+                <th>rating</th>
+                <th>preparation time</th>
+                <th>servings</th>
+                <th>ingredients</th>
+                <th>instructions</th>
+                <th>image</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="recipe : ${recipes}">
+                <td th:text="${recipe.title}"></td>
+                <td th:text="${recipe.id}"></td>
+                <td th:text="${recipe.rating}"></td>
+                <td th:text="${recipe.readyInMinutes}"></td>
+                <td th:text="${recipe.servings}"></td>
+                <td th:text="${recipe.ingredients}"></td>
+                <td th:text="${recipe.instructions}"></td>
+                <td><img th:src="${recipe.image}" width="50px"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
