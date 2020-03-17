@@ -7,12 +7,15 @@
     tools:context=".ui.Activities.RecipeViewActivity">
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="450dp"
-        android:layout_centerInParent="true"
-        android:src="@drawable/mynd"
         android:id="@+id/recipeImage"
-        ></ImageView>
+        android:layout_width="408dp"
+        android:layout_height="275dp"
+        android:layout_centerInParent="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/mynd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></ImageView>
 
     <TextView
         android:id="@+id/recipeTitle"
@@ -22,8 +25,9 @@
         android:padding="8dp"
         android:text="hallohgallo"
         android:textSize="20dp"
-        android:textStyle="bold"></TextView>
-
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/recipeImage"
+        tools:layout_editor_absoluteX="0dp"></TextView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
