@@ -16,10 +16,12 @@
   <component name="ChangeListManager">
     <list default="true" id="31781dd9-ef25-4a42-b9f8-8c39c82b0ec4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-<<<<<<< HEAD
-=======
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
->>>>>>> 2e43c90a36e768669d73f1d14ece0a4e9b332108
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/client/data/entities/Recipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/client/data/entities/Recipe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/client/entities/Recipe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/client/ui/Activities/Adapters/RecyclerAdapterCookBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/client/ui/Activities/Adapters/RecyclerAdapterCookBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/client/ui/Activities/CookBookActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/client/ui/Activities/CookBookActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/login.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/login.jpg" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -73,8 +75,8 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/java" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/java/com/example/client/ui/profile" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -89,12 +91,8 @@
     <option name="LAST_EDITED_BUILD_TYPE" value="release" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Lenovo\Documents\Skoli\6.Vor2020\Hugbo2\Freyr\20200312\Freyr_app\app\src\main\java\com\example\client\ui\profile" />
-      <recent name="C:\Users\Lenovo\Documents\Skoli\6.Vor2020\Hugbo2\Freyr\20200312\Freyr_app\app\src\main\res\layout" />
-      <recent name="C:\Users\Thorsteinn\Desktop\freyr\Freyr_app\app\src\main\res\drawable-v24" />
-      <recent name="C:\Users\Thorsteinn\Desktop\freyr\Freyr_app\app\src\main\java\com\example\client\ui\Activities" />
-      <recent name="C:\Users\Thorsteinn\Desktop\freyr\Freyr_app\app\src\main\res\layout" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.client.ui.Activities.Adapters" />
     </key>
     <key name="android.template.packageName">
       <recent name="com.example.client" />
@@ -103,8 +101,12 @@
     <key name="android.template.parentActivityClass">
       <recent name="" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.example.client.ui.Activities.Adapters" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Thorsteinn\Desktop\freyr\freyr\Freyr_app\app\src\main\res\drawable" />
+      <recent name="C:\Users\Lenovo\Documents\Skoli\6.Vor2020\Hugbo2\Freyr\20200312\Freyr_app\app\src\main\java\com\example\client\ui\profile" />
+      <recent name="C:\Users\Lenovo\Documents\Skoli\6.Vor2020\Hugbo2\Freyr\20200312\Freyr_app\app\src\main\res\layout" />
+      <recent name="C:\Users\Thorsteinn\Desktop\freyr\Freyr_app\app\src\main\res\drawable-v24" />
+      <recent name="C:\Users\Thorsteinn\Desktop\freyr\Freyr_app\app\src\main\java\com\example\client\ui\Activities" />
     </key>
   </component>
   <component name="RunDashboard">
