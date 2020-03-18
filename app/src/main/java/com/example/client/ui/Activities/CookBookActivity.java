@@ -1,16 +1,14 @@
 package com.example.client.ui.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.res.ResourcesCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
 import com.example.client.R;
-import com.example.client.entities.Recipe;
+import com.example.client.data.entities.Recipe;
 import com.example.client.ui.Activities.Adapters.RecyclerAdapterCookBook;
-import com.example.client.ui.Activities.Adapters.RecyclerAdapterSearch;
 
 import java.util.ArrayList;
 
@@ -34,11 +32,11 @@ public class CookBookActivity extends AppCompatActivity {
 
         // Test data
         String image = "https://i.imgur.com/DvpvklR.png";
-        Recipe las = new Recipe("Lasagna",1234,image );
-        Recipe burg = new Recipe("Burger",1345, image);
+        com.example.client.data.entities.Recipe.Recipe las = new com.example.client.data.entities.Recipe.Recipe("Lasagna",1234,image );
+        com.example.client.data.entities.Recipe.Recipe burg = new com.example.client.data.entities.Recipe.Recipe("Burger",1345, image);
 
 
-        ArrayList<Recipe> a = new ArrayList<>();
+        ArrayList<Recipe.Recipe> a = new ArrayList<>();
         a.add(las);
         a.add(burg);
         mAdapter = new RecyclerAdapterCookBook(a,this);
