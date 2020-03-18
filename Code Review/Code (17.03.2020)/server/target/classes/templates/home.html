@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://notendur.hi.is/~hfg7/freyr2/src/main/resources/templates/homeStyle.css">
+    <title>Freyr</title>
+</head>
+<body>
+<h1>Freyr</h1>
+
+
+    <div th:switch="${loggedinuser}">
+
+        <h3 th:case="null"></h3>
+        <div th:case="*">
+            <p id="log">Logged in as: </p>
+            <p th:text="${loggedinuser.userName}"></p>
+        </div>
+
+
+
+    </div>
+    <div class="takkar">
+        <h2>Search:</h2>
+        <button class="button" style="vertical-align:middle">
+            <a href="/search"><span>by title</span></a>
+        </button>
+        <button class="button" style="vertical-align:middle">
+            <a href="/ingredientSearch"><span>by ingredients</span></a>
+        </button>
+    </div>
+    <div class="takkar">
+        <h2>Manage account</h2>
+        <button class="button" style="vertical-align:middle">
+            <a href="/signup"><span>Sign Up</span></a>
+        </button>
+        <button class="button" style="vertical-align:middle">
+            <a href="/login"><span>Login</span></a>
+        </button>
+        <button class="button" style="vertical-align:middle">
+            <a href="/profile"><span>Profile</span></a>
+        </button>
+    </div>
+
+
+    <h2>About the web application</h2>
+        <p class="para">
+            Using a recipe book to look for the perfect meal can be a long and tiring task. Even when we use a recipe website we often end up wasting food because it doesn’t ﬁt into the recipe. That is not environmentally friendly and wastes money. This web application will solve this problem. The user will be able to select what ingredients they want to use and get recipes to choose from. The system will show the best result ﬁrst so the search for the perfect meal is just a few clicks away.
+        </p>
+        <p class="para">
+            Our team came up with this idea at out ﬁrst meeting. We thought of a couple of things to do but we all agreed this one was the best. Food waste is a huge issue in western society and the team thinks that this idea will help alot with that problem. This is something dear to the teams heart because this can have a great impact on the world. This also simpliﬁes cooking and preparing meals alot for the average Joe because the amount of planning and thinking is massively reduced with the features presented here above.
+        </p>
+<form action="#" th:action="@{/}"  method="post">
+    <button class="button" name="logout" id ="logout">
+        Log out
+    </button>
+
+</form>
+
+    <div class="myndir">
+        <a target="_blank" href="https://notendur.hi.is/~hfg7/freyr2/src/main/resources/templates/pastarettur.jpg">
+            <img src="https://notendur.hi.is/~hfg7/freyr2/src/main/resources/templates/pastarettur.jpg" alt="Mountains" width="800" height="1200">
+        </a>
+    </div>
+
+    <div class="myndir">
+        <a target="_blank" href="https://notendur.hi.is/~hfg7/freyr2/src/main/resources/templates/Lobster-Tails-with-Garlic-Lemon-Butter-3.jpg">
+            <img src="https://notendur.hi.is/~hfg7/freyr2/src/main/resources/templates/Lobster-Tails-with-Garlic-Lemon-Butter-3.jpg" alt="Mountains" width="1200" height="1800">
+        </a>
+    </div>
+    <div class="myndir">
+        <a target="_blank" href="https://notendur.hi.is/~hfg7/freyr2/src/main/resources/templates/Chinese-style-Pumpkin-Omelette-8.jpg">
+            <img src="https://notendur.hi.is/~hfg7/freyr2/src/main/resources/templates/Chinese-style-Pumpkin-Omelette-8.jpg" alt="Mountains" width="680" height="1020">
+        </a>
+    </div>
+    <div class="myndir">
+        <a target="_blank" href="https://notendur.hi.is/~hfg7/freyr2/src/main/resources/templates/indian.jpeg">
+            <img src="https://notendur.hi.is/~hfg7/freyr2/src/main/resources/templates/indian.jpeg" alt="Mountains" width="800" height="1200">
+        </a>
+    </div>
+
+    <div class="myndir">
+        <a target="_blank" href="https://notendur.hi.is/~hfg7/freyr2/src/main/resources/templates/pizza.jpg">
+            <img src="https://notendur.hi.is/~hfg7/freyr2/src/main/resources/templates/pizza.jpg" alt="Mountains" width="1000" height="1500">
+        </a>
+    </div>
+
+    <div class="myndir">
+        <a target="_blank" href="https://notendur.hi.is/~hfg7/freyr2/src/main/resources/templates/lasagnef.jpg">
+            <img src="https://notendur.hi.is/~hfg7/freyr2/src/main/resources/templates/lasagnef.jpg" alt="Mountains" width="1900" height="2850">
+        </a>
+    </div>
+    <div class="myndir">
+        <a target="_blank" href="https://notendur.hi.is/~hfg7/freyr2/src/main/resources/templates/kjulli.jpg">
+            <img src="https://notendur.hi.is/~hfg7/freyr2/src/main/resources/templates/kjulli.jpg" alt="Mountains" width="1400" height="2097">
+        </a>
+    </div>
+
+    <div class="myndir">
+        <a target="_blank" href="https://notendur.hi.is/~hfg7/freyr2/src/main/resources/templates/holt.jpg">
+            <img src="https://notendur.hi.is/~hfg7/freyr2/src/main/resources/templates/holt.jpg" alt="Mountains" width="700" height="1050">
+        </a>
+    </div>
+</body>
+</html>
