@@ -4,6 +4,9 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
+/**
+ * heldur utanum þau gögn sem fara í profile fragmentið
+ */
 public class ProfileViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;

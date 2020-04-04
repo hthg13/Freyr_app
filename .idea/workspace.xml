@@ -15,23 +15,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="31781dd9-ef25-4a42-b9f8-8c39c82b0ec4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/client/data/DAO/RecipeDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/client/data/DB/RecipeDataBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/client/data/Repositories/RecipeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/client/ui/Activities/Adapters/RecyclerAdapterCreateRecipe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/client/ui/Activities/SearchResultsActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_search_results.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/client/data/entities/CookBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/client/data/entities/CookBook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/client/data/entities/Recipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/client/data/entities/Recipe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/client/data/DB/RecipeDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/client/data/DB/RecipeDataBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/client/data/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/client/data/entities/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/client/ui/Activities/Adapters/RecyclerAdapterSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/client/ui/Activities/Adapters/RecyclerAdapterSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/client/ui/Activities/CookBookActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/client/ui/Activities/CookBookActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/client/ui/Activities/CreateRecipeActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/client/ui/Activities/CreateRecipeActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/client/ui/Activities/SearchActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/client/ui/Activities/SearchActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_create_recipe.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_create_recipe.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/client/ui/profile/ProfileFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/client/ui/profile/ProfileFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/client/ui/profile/ProfileViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/client/ui/profile/ProfileViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/bottom_nav_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/bottom_nav_menu.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,9 +52,9 @@
       <list>
         <option value="HTML File" />
         <option value="layoutResourceFile_vertical" />
+        <option value="layoutResourceFile" />
         <option value="Class" />
         <option value="resourceFile" />
-        <option value="layoutResourceFile" />
       </list>
     </option>
   </component>

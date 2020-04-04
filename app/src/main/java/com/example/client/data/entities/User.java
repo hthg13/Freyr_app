@@ -17,9 +17,9 @@ public class User {
     private String mUserName;
     private String mEmail;
     private String mPassword;
-    private CookBook mCookbook;
-    private Schedule mSchedule;
-    private ShoppingList mShoppingList;
+    //private CookBook mCookbook;
+    //private Schedule mSchedule;
+    //private ShoppingList mShoppingList;
 
 
     public User(long id, String userName) {
@@ -59,7 +59,7 @@ public class User {
         mPassword = password;
     }
 
-    public CookBook getCookbook() {
+    /*public CookBook getCookbook() {
         return mCookbook;
     }
 
@@ -81,5 +81,5 @@ public class User {
 
     public void setShoppingList(ShoppingList shoppingList) {
         mShoppingList = shoppingList;
-    }
+    }*/
 }
