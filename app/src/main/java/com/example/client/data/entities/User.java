@@ -1,11 +1,18 @@
 package com.example.client.data.entities;
 
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
 import com.example.client.data.entities.CookBook;
 import com.example.client.data.entities.Schedule;
 import com.example.client.data.entities.ShoppingList;
-
+@Entity(tableName = "user_table")
 public class User {
 
+    /*
+    todo skoða one-to-one relationship við cookbook
+     */
+    @PrimaryKey(autoGenerate = true)
     private long mId;
     private String mUserName;
     private String mEmail;

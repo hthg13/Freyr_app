@@ -1,14 +1,19 @@
 package com.example.client.data.entities;
 
+import androidx.room.Entity;
+import androidx.room.Ignore;
+import androidx.room.PrimaryKey;
+
 import java.util.ArrayList;
 
+@Entity(tableName = "recipe_table")
 public class Recipe {
 
          /*
-         * TODO gera þetta að room
+         * TODO skoða many to many relationship við cookbook
          */
-
-        private Integer id;
+        @PrimaryKey(autoGenerate = true)
+        private int id;
         private String index;
         private String title;
         private String instructions;
@@ -16,21 +21,37 @@ public class Recipe {
         private String image;
         private int readyInMin;
         private int servings;
+        @Ignore
         private ArrayList<String> ingredients;
         private boolean fullInfo = false;
 
-        public Recipe(String title, Integer id, String image){
+    public ArrayList<String> getIngredients() {
+        return ingredients;
+    }
+
+    public void setIngredients(ArrayList<String> ingredients) {
+        this.ingredients = ingredients;
+    }
+
+    /*
+            TODO pæla í hvort id komi inn her eða verði autogen
+             */
+        public Recipe(String title, int id, String image){
             this.title=title;
             this.id=id;
             this.image=image;
         }
 
-        public void setFullInfo(){
-            this.fullInfo=true;
+        public boolean isFullInfo() {
+            return fullInfo;
         }
 
-        public boolean getFullInfo(){
-            return this.fullInfo;
+        public void setFullInfo(boolean fullInfo) {
+            this.fullInfo = fullInfo;
+         }
+
+        public void setIndex(String index) {
+            this.index = index;
         }
 
         public void setIndex(int i){
@@ -41,7 +62,7 @@ public class Recipe {
             return this.index;
         }
 
-        public void setId(Integer id){
+        public void setId(int id){
             this.id=id;
         }
 
@@ -92,15 +113,17 @@ public class Recipe {
         public void setServings(int servings) {
             this.servings = servings;
         }
-
-        public void setIngredients(ArrayList<String> ingredients) {
+        public int getServings(){
+        return this.servings;
+    }
+     /*   public void setIngredients(ArrayList<String> ingredients) {
             this.ingredients = ingredients;
         }
 
         public ArrayList<String> getIngredients() {
             return ingredients;
         }
-
+*/
         @Override
         public String toString(){
             String s = "Title: "+this.title;
