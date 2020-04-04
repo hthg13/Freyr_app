@@ -5,21 +5,30 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
 
+import com.example.client.MainActivity;
 import com.example.client.R;
+import com.example.client.data.entities.Recipe;
+import com.example.client.ui.Activities.Adapters.RecyclerAdapterCookBook;
+import com.example.client.ui.Activities.Adapters.RecyclerAdapterCreateRecipe;
 
 public class CreateRecipeActivity extends AppCompatActivity {
 
 
-    private LinearLayout ingrView;
-    private LinearLayout layout;
 
-    private ArrayList<String> ingredients;
+    private ArrayList<String> ingredients = new ArrayList<String>();
+
+    private RecyclerView recyclerView;
+    private RecyclerView.Adapter mAdapter;
+    private RecyclerView.LayoutManager layoutManager;
 
 
 
@@ -30,9 +39,44 @@ public class CreateRecipeActivity extends AppCompatActivity {
         System.out.println("Create Recipe Activity");
 
 
-
         Button addRecipe = (Button)findViewById(R.id.addRecipe);
-        
+        Button addLine = (Button)findViewById(R.id.addLine);
+
+        recyclerView = (RecyclerView) findViewById(R.id.recycler);
+        recyclerView.setHasFixedSize(false);
+
+        layoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
+
+
+
+
+
+        mAdapter = new RecyclerAdapterCreateRecipe(ingredients, CreateRecipeActivity.this);
+        recyclerView.setAdapter(mAdapter);
+
+
+        addLine.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditText qt = (EditText)findViewById(R.id.quantity);
+                EditText unit = (EditText)findViewById(R.id.unit);
+                EditText ingredient = (EditText)findViewById(R.id.ingredient);
+
+                String toList = qt.getText().toString() + "  " + unit.getText().toString() + "  " + ingredient.getText().toString();
+                System.out.println(toList);
+                ingredients.add(toList);
+                mAdapter.notifyDataSetChanged();
+
+                qt.setText("");
+                unit.setText("");
+                ingredient.setText("");
+            }
+        });
+
+
+
+
         addRecipe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,26 +91,17 @@ public class CreateRecipeActivity extends AppCompatActivity {
                 String title = t.getText().toString();
                 String instructions = instruct.getText().toString();
 
-                /*
-                 *  Eftir að gera:
-                 *   Þannig að hægt se að bæta við fleiri ingredients
-                 *   dálkum, ítra í gegnum það og ná í quantity, unit, ingr
-                 *   t.d. 2 tsp laukur
-                 *
-                 *   for now bara hafa eitt til að sjá þetta virka
-                 */
 
                 EditText q = (EditText) findViewById(R.id.quantity);
                 EditText u = (EditText) findViewById(R.id.unit);
                 EditText i = (EditText) findViewById(R.id.ingredient);
                 String fullIngr = q.getText()+" "+u.getText()+" "+i.getText();
 
-                //Búa til recipe
 
-//                Recipe r = new Recipe();
-//                r.setInstructions(instructions);
-//                r.setTitle(title);
-//                r.setIngredients(fullIngr);
+                Recipe r = new Recipe(title,1,"");
+                r.setInstructions(instructions);
+                r.setTitle(title);
+                r.setIngredients(ingredients);
 
                 /*
                  *
@@ -78,6 +113,9 @@ public class CreateRecipeActivity extends AppCompatActivity {
                 q.setText("");
                 u.setText("");
                 i.setText("");
+                ingredients.clear();
+                mAdapter.notifyItemRangeRemoved(0,0);
+                mAdapter.notifyDataSetChanged();
             }
         });
 

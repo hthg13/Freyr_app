@@ -7,12 +7,8 @@
     tools:context="ui.Activities.CreateRecipeActivity">
 
     <ScrollView
-        android:id="@+id/scrollView2"
-        android:layout_width="347dp"
-        android:layout_height="535dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:id="@+id/layout"
@@ -49,7 +45,7 @@
 
                 <EditText
                     android:id="@+id/quantity"
-                    android:layout_width="112dp"
+                    android:layout_width="46dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:ems="10"
@@ -58,7 +54,7 @@
 
                 <EditText
                     android:id="@+id/unit"
-                    android:layout_width="114dp"
+                    android:layout_width="13dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:ems="10"
@@ -67,30 +63,50 @@
 
                 <EditText
                     android:id="@+id/ingredient"
-                    android:layout_width="wrap_content"
+                    android:layout_width="177dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:ems="10"
                     android:hint="Ingredient"
                     android:inputType="textPersonName" />
 
+                <Button
+                    android:id="@+id/addLine"
+                    android:layout_width="11dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minWidth="5dp"
+                    android:minHeight="5dp"
+                    android:text="+" />
+
             </LinearLayout>
 
-            <Button
-                android:id="@+id/addLine"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:minWidth="5dp"
-                android:minHeight="5dp"
-                android:text="+" />
-
-            <Button
-                android:id="@+id/addRecipe"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="52dp"
-                android:minHeight="48dp"
-                android:text="Add" />
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <Button
+                        android:id="@+id/addRecipe"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:minHeight="48dp"
+                        android:text="Add" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 

@@ -1,5 +1,6 @@
 package com.example.client.ui.Activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -7,13 +8,22 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.client.MainActivity;
 import com.example.client.R;
+import com.example.client.data.entities.Recipe;
+import com.example.client.ui.Activities.Adapters.RecyclerAdapterCookBook;
+import com.example.client.ui.Activities.Adapters.RecyclerAdapterSearch;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class SearchActivity extends AppCompatActivity {
+    private RecyclerView recyclerView;
+    private RecyclerView.Adapter mAdapter;
+    private RecyclerView.LayoutManager layoutManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +31,8 @@ public class SearchActivity extends AppCompatActivity {
         setContentView(R.layout.activity_search);
 
         Button titleSearch = (Button)findViewById(R.id.string_search_button);
+
+
 
         titleSearch.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,6 +77,10 @@ public class SearchActivity extends AppCompatActivity {
                     System.out.println(item);
                 }
 
+
+
+                Intent results = new Intent(SearchActivity.this, SearchResultsActivity.class);
+                SearchActivity.this.startActivity(results);
             }
         });
     }
