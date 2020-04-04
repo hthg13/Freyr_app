@@ -32,11 +32,11 @@ public class CookBookActivity extends AppCompatActivity {
 
         // Test data
         String image = "https://i.imgur.com/DvpvklR.png";
-        com.example.client.data.entities.Recipe.Recipe las = new com.example.client.data.entities.Recipe.Recipe("Lasagna",1234,image );
-        com.example.client.data.entities.Recipe.Recipe burg = new com.example.client.data.entities.Recipe.Recipe("Burger",1345, image);
+        Recipe las = new Recipe("Lasagna",1234,image);
+        Recipe burg = new Recipe("Burger",1345, image);
 
 
-        ArrayList<Recipe.Recipe> a = new ArrayList<>();
+        ArrayList<Recipe> a = new ArrayList<>();
         a.add(las);
         a.add(burg);
         mAdapter = new RecyclerAdapterCookBook(a,this);
