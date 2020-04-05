@@ -16,11 +16,15 @@
   <component name="ChangeListManager">
     <list default="true" id="31781dd9-ef25-4a42-b9f8-8c39c82b0ec4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/client/data/DB/RecipeDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/client/data/DB/RecipeDataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/client/data/DAO/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/client/data/DAO/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/client/data/LoginDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/client/data/LoginDataSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/client/data/LoginRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/client/data/LoginRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/client/data/entities/Schedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/client/data/entities/Schedule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/client/data/entities/ShoppingList.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/client/data/entities/ShoppingList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/client/data/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/client/data/entities/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/client/ui/profile/ProfileFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/client/ui/profile/ProfileFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/client/ui/profile/ProfileViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/client/ui/profile/ProfileViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/client/ui/login/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/client/ui/login/LoginActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/bottom_nav_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/bottom_nav_menu.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,8 +57,8 @@
         <option value="HTML File" />
         <option value="layoutResourceFile_vertical" />
         <option value="layoutResourceFile" />
-        <option value="Class" />
         <option value="resourceFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -90,8 +94,12 @@
     <option name="LAST_EDITED_BUILD_TYPE" value="release" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.example.client.ui.Activities.Adapters" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Thorsteinn\Desktop\freyr\freyr\Freyr_app\app\src\main\res\drawable" />
+      <recent name="C:\Users\Lenovo\Documents\Skoli\6.Vor2020\Hugbo2\Freyr\20200312\Freyr_app\app\src\main\java\com\example\client\ui\profile" />
+      <recent name="C:\Users\Lenovo\Documents\Skoli\6.Vor2020\Hugbo2\Freyr\20200312\Freyr_app\app\src\main\res\layout" />
+      <recent name="C:\Users\Thorsteinn\Desktop\freyr\Freyr_app\app\src\main\res\drawable-v24" />
+      <recent name="C:\Users\Thorsteinn\Desktop\freyr\Freyr_app\app\src\main\java\com\example\client\ui\Activities" />
     </key>
     <key name="android.template.packageName">
       <recent name="com.example.client" />
@@ -100,12 +108,8 @@
     <key name="android.template.parentActivityClass">
       <recent name="" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Thorsteinn\Desktop\freyr\freyr\Freyr_app\app\src\main\res\drawable" />
-      <recent name="C:\Users\Lenovo\Documents\Skoli\6.Vor2020\Hugbo2\Freyr\20200312\Freyr_app\app\src\main\java\com\example\client\ui\profile" />
-      <recent name="C:\Users\Lenovo\Documents\Skoli\6.Vor2020\Hugbo2\Freyr\20200312\Freyr_app\app\src\main\res\layout" />
-      <recent name="C:\Users\Thorsteinn\Desktop\freyr\Freyr_app\app\src\main\res\drawable-v24" />
-      <recent name="C:\Users\Thorsteinn\Desktop\freyr\Freyr_app\app\src\main\java\com\example\client\ui\Activities" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.client.ui.Activities.Adapters" />
     </key>
   </component>
   <component name="RunDashboard">

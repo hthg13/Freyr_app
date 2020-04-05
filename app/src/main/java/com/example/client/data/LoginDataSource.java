@@ -18,7 +18,12 @@ public class LoginDataSource {
         try {
             // TODO: handle loggedInUser authentication
             //User fakeUser = new User(username);
-            User user = new User(1, username);
+            User user = new User(1, username, password);
+
+            int cookbookid = 1;
+
+            user.setCookbookId(cookbookid);
+
             return new Result.Success<>(user);
         } catch (Exception e) {
             return new Result.Error(new IOException("Error logging in", e));

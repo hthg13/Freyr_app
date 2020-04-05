@@ -35,7 +35,7 @@ import com.example.client.ui.profile.ProfileViewModel;
 public class LoginActivity extends AppCompatActivity {
 
     private LoginViewModel loginViewModel;
-    private String userLoginResults;
+    // REMOVED private String userLoginResults;
     private ProfileViewModel mProfileViewModel;
 
     @Override
@@ -50,6 +50,9 @@ public class LoginActivity extends AppCompatActivity {
         final Button loginButton = findViewById(R.id.login);
         final ProgressBar loadingProgressBar = findViewById(R.id.loading);
 
+        /*
+         * segir til um hvort að notandi sé búinn að slá inn gilt notendanafn og lykilorð áður en að búið er að ýta á takkann
+         */
         loginViewModel.getLoginFormState().observe(this, new Observer<LoginFormState>() {
             @Override
             public void onChanged(@Nullable LoginFormState loginFormState) {
@@ -66,10 +69,12 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        /*
+         * sér um meðhöndlun á gögnum eftir að notandi ýtir á takkann
+         */
         loginViewModel.getLoginResult().observe(this, new Observer<LoginResult>() {
             @Override
             public void onChanged(@Nullable LoginResult loginResult) {
-
                 if (loginResult == null) {
                     return;
                 }
@@ -79,14 +84,8 @@ public class LoginActivity extends AppCompatActivity {
                 }
                 if (loginResult.getSuccess() != null) {
                     updateUiWithUser(loginResult.getSuccess());
-                    userLoginResults = loginResult.toString();
                 }
                 setResult(Activity.RESULT_OK);
-
-                // prufa helga
-
-
-                //Complete and destroy login activity once successful
                 finish();
             }
         });
@@ -108,10 +107,11 @@ public class LoginActivity extends AppCompatActivity {
                         passwordEditText.getText().toString());
             }
         };
+
         usernameEditText.addTextChangedListener(afterTextChangedListener);
         passwordEditText.addTextChangedListener(afterTextChangedListener);
-        passwordEditText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
 
+        passwordEditText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 if (actionId == EditorInfo.IME_ACTION_DONE) {
@@ -130,26 +130,11 @@ public class LoginActivity extends AppCompatActivity {
                         passwordEditText.getText().toString());
             }
         });
-
-
     }
 
     private void updateUiWithUser(LoggedInUserView model) {
         String welcome = getString(R.string.welcome) + model.getDisplayName();
-        // TODO : initiate successful logged in experience
-        // mProfileViewModel.setText(model.toString());
-
-        //Intent returnIntent = new Intent();
-        //returnIntent.putExtra("result", (Parcelable) model);
-        //setResult(Activity.RESULT_OK,returnIntent);
-        //finish();
-
-        //mProfileViewModel.setText(userLoginResults);
-        //Bundle bundle = new Bundle();
-        //bundle.putString("loginResults", model.getDisplayName());
-        //ProfileFragment profileFragment = new ProfileFragment();
-        //profileFragment.setArguments(bundle);
-
+        // REMOVED profileFragment.setArguments(bundle);
         Toast.makeText(getApplicationContext(), welcome, Toast.LENGTH_LONG).show();
     }
 

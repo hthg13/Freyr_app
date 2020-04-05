@@ -2,6 +2,8 @@
     <string name="app_name">Client</string>
 
     <!-- bottom navigation strings -->
+
+    <!-- OLD STRINGS-->
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
@@ -10,6 +12,11 @@
     <string name="title_cookbook">Cookbook</string>
     <string name="title_create_recipe">Create Recipe</string>
     <string name="title_recipe">Recipe</string>
+
+    <!-- NEW STRINGS -->
+    <string name="title_calendar">Food Calendar</string>
+    <string name="title_search">Search</string>
+    <string name="title_shoppinglist">Shopping List</string>
 
 
     <!-- Log in, sign up and user strings -->
