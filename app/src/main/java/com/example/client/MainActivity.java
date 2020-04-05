@@ -9,7 +9,9 @@ import android.widget.Button;
 import com.example.client.ui.Activities.CookBookActivity;
 import com.example.client.ui.Activities.CreateRecipeActivity;
 import com.example.client.ui.Activities.SearchActivity;
-import com.example.client.ui.login.LoginActivity;
+import com.example.client.ui.signup_and_login.LoginActivity;
+import com.example.client.ui.signup_and_login.SignupActivity;
+import com.example.client.ui.signup_and_login.SignupOrLoginActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
@@ -19,26 +21,54 @@ import androidx.navigation.ui.NavigationUI;
 
 public class MainActivity extends AppCompatActivity {
 
-    // TODO: remove
-    private static final String LOG_TAG = "Helga"; //hmmm
+    private int SIGNUPORLOGIN_REQUEST_CODE = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Intent activityLoginIntent = new Intent(this, LoginActivity.class);
-        startActivity(activityLoginIntent);
-        //Log.d("loginHelga", activityLoginIntent.getData().toString());
+        // start by checking if the user wants to login or signup to the app
+        Intent activitySignupOrLogin = new Intent(this, SignupOrLoginActivity.class);
+        startActivityForResult(activitySignupOrLogin, SIGNUPORLOGIN_REQUEST_CODE);
+    }
 
-        // starts the navigation view after successfull login or signup
-        startNavigation();
+    /*
+     * activated after signuporloginactivity returns result from user
+     * either the user wants to login or signup
+     */
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
 
+        if (requestCode == SIGNUPORLOGIN_REQUEST_CODE){
+            if (resultCode == RESULT_OK) {
+                // Get String data from Intent
+                String returnString = data.getStringExtra("hello");
 
+                if (returnString.equals("login")) {
+                    Intent i = new Intent(this, LoginActivity.class);
+                    startActivity(i);
+                } else {
+                    Intent i = new Intent(this, SignupActivity.class);
+                    startActivity(i);
+                }
+
+                // starts the navigation view after successfull login or signup
+                startNavigation();
+
+                // creates temporary buttons from þorsteinn
+                // todo remove
+                createTempButtons();
+            }
+        }
+    }
+
+    private void createTempButtons() {
         //
         // Til að geta prófað cookbook og create
         //
         Button button = (Button)findViewById(R.id.temp);
-        button.setOnClickListener(new View.OnClickListener() {
+            button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent cookbook = new Intent(MainActivity.this, CookBookActivity.class);
@@ -47,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Button button2 = (Button)findViewById(R.id.temp2);
-        button2.setOnClickListener(new View.OnClickListener() {
+            button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent create = new Intent(MainActivity.this, CreateRecipeActivity.class);
@@ -56,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Button button3 = (Button)findViewById(R.id.temp3);
-        button3.setOnClickListener(new View.OnClickListener() {
+            button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent create = new Intent(MainActivity.this, SearchActivity.class);

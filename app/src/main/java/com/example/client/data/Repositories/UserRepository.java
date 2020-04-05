@@ -2,11 +2,15 @@ package com.example.client.data.Repositories;
 
 import android.os.AsyncTask;
 import com.example.client.data.DAO.UserDao;
+import com.example.client.data.DB.UserDatabase;
 import com.example.client.data.entities.User;
 
 public class UserRepository {
 
     private UserDao mUserDao;
+    private static volatile UserRepository instance;
+    private User user = null;
+    private UserDatabase userDataSource;
 
     public void insertUser(User user) {
         new UserInsertion(mUserDao).execute(user);
