@@ -9,222 +9,20 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="login" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="helga" />
     <option name="TOOL_WINDOW_LOG_LEVEL" value="debug" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="31781dd9-ef25-4a42-b9f8-8c39c82b0ec4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/.gitignore.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/.idea/codeStyles/Project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/.project" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/.settings/org.eclipse.buildship.core.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/README.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/.classpath" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/.project" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/.settings/org.eclipse.buildship.core.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/proguard-rules.pro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/androidTest/java/com/example/client/ExampleInstrumentedTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/java/com/example/client/MainActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/java/com/example/client/data/LoginDataSource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/java/com/example/client/data/LoginRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/java/com/example/client/data/Result.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/java/com/example/client/data/entities/CookBook.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/java/com/example/client/data/entities/Recipe.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/java/com/example/client/data/entities/Schedule.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/java/com/example/client/data/entities/ShoppingList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/java/com/example/client/data/entities/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/java/com/example/client/entities/Recipe.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/java/com/example/client/ui/Activities/Adapters/RecyclerAdapterCookBook.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/java/com/example/client/ui/Activities/Adapters/RecyclerAdapterSearch.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/java/com/example/client/ui/Activities/CookBookActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/java/com/example/client/ui/Activities/CreateRecipeActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/java/com/example/client/ui/Activities/LogInActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/java/com/example/client/ui/Activities/ProfileActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/java/com/example/client/ui/Activities/RecipeViewActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/java/com/example/client/ui/Activities/ScheduleActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/java/com/example/client/ui/Activities/SearchActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/java/com/example/client/ui/Activities/SignUpActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/java/com/example/client/ui/dashboard/DashboardFragment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/java/com/example/client/ui/dashboard/DashboardViewModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/java/com/example/client/ui/home/HomeFragment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/java/com/example/client/ui/home/HomeViewModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/java/com/example/client/ui/login/LoggedInUserView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/java/com/example/client/ui/login/LoginActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/java/com/example/client/ui/login/LoginFormState.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/java/com/example/client/ui/login/LoginResult.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/java/com/example/client/ui/login/LoginViewModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/java/com/example/client/ui/login/LoginViewModelFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/java/com/example/client/ui/notifications/NotificationsFragment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/java/com/example/client/ui/notifications/NotificationsViewModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/java/com/example/client/ui/profile/ProfileFragment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/java/com/example/client/ui/profile/ProfileViewModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/res/drawable-v24/mynd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/res/drawable/ic_home_black_24dp.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/res/drawable/ic_notifications_black_24dp.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/res/drawable/login.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/res/layout/activity_cook_book.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/res/layout/activity_create_recipe.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/res/layout/activity_login.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/res/layout/activity_profile.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/res/layout/activity_recipe_view.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/res/layout/activity_schedule.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/res/layout/activity_search.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/res/layout/activity_sign_up.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/res/layout/fragment_dashboard.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/res/layout/fragment_home.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/res/layout/fragment_notifications.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/res/layout/fragment_profile.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/res/layout/recipe_view_layout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/res/layout/text_view_layout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/res/menu/bottom_nav_menu.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/res/navigation/mobile_navigation.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/res/values/colors.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/res/values/dimens.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/res/values/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/main/res/values/styles.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/app/src/test/java/com/example/client/ExampleUnitTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/gradle.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/.idea/$PRODUCT_WORKSPACE_FILE$" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/.idea/codeStyles/Project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/Code Review/Assignment 1 - group 22.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/Code Review/Assignment 2 - Behavior Models.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/Code Review/DesignModelA3.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/lib/javax.annotation.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/lib/javax.ejb.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/lib/javax.jms.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/lib/javax.persistence.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/lib/javax.resource.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/lib/javax.servlet.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/lib/javax.servlet.jsp.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/lib/javax.servlet.jsp.jstl.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/lib/javax.transaction.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/out/production/.mvn/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/out/production/.mvn/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/src/main/java/is/hi/hbv501g/freyr/Freyr/Controllers/recipeController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/src/main/java/is/hi/hbv501g/freyr/Freyr/Controllers/userController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/src/main/java/is/hi/hbv501g/freyr/Freyr/Entities/Recipe.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/src/main/java/is/hi/hbv501g/freyr/Freyr/Entities/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/src/main/java/is/hi/hbv501g/freyr/Freyr/FreyrApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/src/main/java/is/hi/hbv501g/freyr/Freyr/Repositories/RecipeRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/src/main/java/is/hi/hbv501g/freyr/Freyr/Repositories/UserRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/src/main/java/is/hi/hbv501g/freyr/Freyr/Services/Implementations/RecipeServiceImplementation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/src/main/java/is/hi/hbv501g/freyr/Freyr/Services/Implementations/UserServiceImplementation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/src/main/java/is/hi/hbv501g/freyr/Freyr/Services/RecipeService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/src/main/java/is/hi/hbv501g/freyr/Freyr/Services/UserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/src/main/java/is/hi/hbv501g/freyr/Freyr/Utilities/AlertsToUser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/src/main/java/is/hi/hbv501g/freyr/Freyr/Utilities/RecipeMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/src/main/java/is/hi/hbv501g/freyr/Freyr/Utilities/addListsToModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/src/main/resources/templates/BackgroundGreen.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/src/main/resources/templates/Chinese-style-Pumpkin-Omelette-8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/src/main/resources/templates/Lobster-Tails-with-Garlic-Lemon-Butter-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/src/main/resources/templates/darkg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/src/main/resources/templates/favoriteRecipes.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/src/main/resources/templates/holt.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/src/main/resources/templates/home.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/src/main/resources/templates/homeStyle.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/src/main/resources/templates/indian.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/src/main/resources/templates/ingredientSearch.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/src/main/resources/templates/kjulli.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/src/main/resources/templates/lasagnef.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/src/main/resources/templates/loggedInUser.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/src/main/resources/templates/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/src/main/resources/templates/pastarettur.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/src/main/resources/templates/pizza.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/src/main/resources/templates/profile.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/src/main/resources/templates/recipe.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/src/main/resources/templates/search.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/src/main/resources/templates/settings.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/src/main/resources/templates/signup.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/src/main/resources/templates/user.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/src/test/java/is/hi/hbv501g/freyr/Freyr/FreyrApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/target/classes/META-INF/Freyr.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/target/classes/is/hi/hbv501g/freyr/Freyr/Controllers/recipeController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/target/classes/is/hi/hbv501g/freyr/Freyr/Controllers/userController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/target/classes/is/hi/hbv501g/freyr/Freyr/Entities/Recipe.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/target/classes/is/hi/hbv501g/freyr/Freyr/Entities/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/target/classes/is/hi/hbv501g/freyr/Freyr/FreyrApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/target/classes/is/hi/hbv501g/freyr/Freyr/Repositories/RecipeRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/target/classes/is/hi/hbv501g/freyr/Freyr/Repositories/UserRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/target/classes/is/hi/hbv501g/freyr/Freyr/Services/Implementations/RecipeServiceImplementation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/target/classes/is/hi/hbv501g/freyr/Freyr/Services/Implementations/UserServiceImplementation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/target/classes/is/hi/hbv501g/freyr/Freyr/Services/RecipeService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/target/classes/is/hi/hbv501g/freyr/Freyr/Services/UserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/target/classes/is/hi/hbv501g/freyr/Freyr/Utilities/AlertsToUser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/target/classes/is/hi/hbv501g/freyr/Freyr/Utilities/RecipeMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/target/classes/is/hi/hbv501g/freyr/Freyr/Utilities/addListsToModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/target/classes/templates/BackgroundGreen.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/target/classes/templates/Chinese-style-Pumpkin-Omelette-8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/target/classes/templates/Lobster-Tails-with-Garlic-Lemon-Butter-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/target/classes/templates/darkg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/target/classes/templates/favoriteRecipes.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/target/classes/templates/holt.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/target/classes/templates/home.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/target/classes/templates/homeStyle.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/target/classes/templates/indian.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/target/classes/templates/ingredientSearch.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/target/classes/templates/kjulli.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/target/classes/templates/lasagnef.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/target/classes/templates/loggedInUser.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/target/classes/templates/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/target/classes/templates/pastarettur.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/target/classes/templates/pizza.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/target/classes/templates/profile.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/target/classes/templates/recipe.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/target/classes/templates/search.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/target/classes/templates/settings.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/target/classes/templates/signup.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/target/classes/templates/user.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/server/target/test-classes/is/hi/hbv501g/freyr/Freyr/FreyrApplicationTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Code (17.03.2020)/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code Review/Project structure/Assignment 2 - diagrams.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/client/data/DAO/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/client/data/DAO/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/client/data/DB/UserDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/client/data/DB/UserDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/client/data/Repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/client/data/Repositories/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/client/data/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/client/data/entities/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/client/ui/Activities/SignUpActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/client/ui/signup_and_login/SignupActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/client/ui/signup_and_login/SignupActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/client/ui/signup_and_login/SignupViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/client/ui/signup_and_login/SignupViewModel.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -256,9 +54,9 @@
       <list>
         <option value="HTML File" />
         <option value="layoutResourceFile_vertical" />
-        <option value="Class" />
         <option value="resourceFile" />
         <option value="layoutResourceFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -279,7 +77,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/CodeReview/Code(17.03.2020)" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/layout" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -305,11 +103,11 @@
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Lenovo\Documents\Skoli\6.Vor2020\Hugbo2\Freyr\05042020\Freyr_app\app\src\main\res\layout" />
       <recent name="C:\Users\Thorsteinn\Desktop\freyr\freyr\Freyr_app\app\src\main\res\drawable" />
       <recent name="C:\Users\Lenovo\Documents\Skoli\6.Vor2020\Hugbo2\Freyr\20200312\Freyr_app\app\src\main\java\com\example\client\ui\profile" />
       <recent name="C:\Users\Lenovo\Documents\Skoli\6.Vor2020\Hugbo2\Freyr\20200312\Freyr_app\app\src\main\res\layout" />
       <recent name="C:\Users\Thorsteinn\Desktop\freyr\Freyr_app\app\src\main\res\drawable-v24" />
-      <recent name="C:\Users\Thorsteinn\Desktop\freyr\Freyr_app\app\src\main\java\com\example\client\ui\Activities" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -470,15 +268,6 @@
       <workItem from="1583511272404" duration="7463000" />
     </task>
     <servers />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
