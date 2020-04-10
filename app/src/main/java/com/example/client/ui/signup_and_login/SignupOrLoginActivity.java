@@ -17,14 +17,13 @@ import com.example.client.R;
  */
 public class SignupOrLoginActivity extends AppCompatActivity {
 
-    private SignupOrLoginViewModel signupOrLoginViewModel;
-    private LoginViewModel mLoginViewModel;
+    private UserViewModel mSignupOrLoginViewModel;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signuporlogin);
-        signupOrLoginViewModel = ViewModelProviders.of(SignupOrLoginActivity.this).get(SignupOrLoginViewModel.class);
+        mSignupOrLoginViewModel = ViewModelProviders.of(SignupOrLoginActivity.this).get(UserViewModel.class);
 
         final Button loginButton = findViewById(R.id.login);
         final Button signupButton = findViewById(R.id.signup);
@@ -52,4 +51,6 @@ public class SignupOrLoginActivity extends AppCompatActivity {
             }
         });
     }
+
+
 }

@@ -19,7 +19,7 @@ public class User {
     private String mUserName;
     private String mEmail;
     private String mPassword;
-    private int mCookbookId; //todo er ekki í lagi að vísa í id frekar en hlutinn? það er ekki hægt að geyma sérútbúna hluti í room db ...
+    private int mCookbookId;
     private int mScheduleId;
     private int mShoppingListId;
 
