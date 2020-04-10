@@ -30,6 +30,10 @@ public class UserViewModel extends AndroidViewModel {
         mAllUsers = mUserRepository.getAllUsers();
     }
 
+    /**
+     * inserts new user to usertable
+     * @param user
+     */
     public void insert(User user) {
         mUserRepository.insertUser(user);
     }
@@ -38,26 +42,60 @@ public class UserViewModel extends AndroidViewModel {
         return mAllUsers;
     }
 
-    public void updateUserEmail(String email, long userid) {
-        mUserRepository.updateUserEmail(email, userid);
-    }
-
+    /**
+     * deletes a specific user
+     * @param user
+     */
     public void delete(User user) {
         mUserRepository.deleteUser(user);
     }
 
+    /**
+     * used to update the cookbookid that represents the cookbook that the user owns
+     * cookbookid is initially 0
+     * @param cookbookid id of the cookbook to be linked with the session user
+     * @param userid session user id
+     */
     public void updateUserCookbookId(int cookbookid, long userid) {
         mUserRepository.updateUserCookbookId(cookbookid,userid);
     }
 
+    /**
+     * used to update the scheduleid that represents the schedule that the user owns
+     * scheduleid is initially 0
+     * @param scheduleid id of the cookbook to be linked with the session user
+     * @param userid session user id
+     */
     public void updateUserScheduleId(int scheduleid, long userid) {
         mUserRepository.updateUserCookbookId(scheduleid,userid);
     }
 
+    /**
+     * used to update the shoppinglistid that represents the shoppinglist that the user owns
+     * scheduleid is initially 0
+     * @param shoppinglistid id of the shoppinglist to be linked with the session user
+     * @param userid session user id
+     */
     public void updateUserShoppingListId(int shoppinglistid, long userid) {
         mUserRepository.updateUserCookbookId(shoppinglistid,userid);
     }
 
+    /**
+     * used to update the email that represents the email that the user owns
+     * @param email id of the shoppinglist to be linked with the session user
+     * @param userid session user id
+     */
+    public void updateUserEmail(String email, long userid) {
+        mUserRepository.updateUserEmail(email, userid);
+    }
+
+    /**
+     * returns a User entity with the session user username
+     * @param username
+     * @return
+     * @throws ExecutionException
+     * @throws InterruptedException
+     */
     public User getUserInfoByName(String username) throws ExecutionException, InterruptedException {
         return mUserRepository.getUserInfoByName(username);
     }
