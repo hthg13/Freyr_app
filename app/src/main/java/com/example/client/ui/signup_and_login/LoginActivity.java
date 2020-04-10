@@ -128,6 +128,7 @@ public class LoginActivity extends AppCompatActivity {
         for (int i = 0; i<userName.size(); i++) {
             if (enteredUserName.equals(userName.get(i).getUserName())) {
                 setExists(true);
+                break;
             }
             else setExists(false);
         }
@@ -139,6 +140,7 @@ public class LoginActivity extends AppCompatActivity {
         for (int i = 0; i<users.size(); i++) {
             if (enteredUserName.equals(users.get(i).getUserName())) {
                 setMatch(users.get(i).getPassword().equals(enteredPassword));
+                break;
             }
             else setMatch(false);
         }
