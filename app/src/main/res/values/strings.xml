@@ -2,10 +2,22 @@
     <string name="app_name">Client</string>
 
     <!-- bottom navigation strings -->
+
+    <!-- OLD STRINGS-->
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="title_profile">Profile</string>
+
+    <string name="title_cookbook">Cookbook</string>
+    <string name="title_create_recipe">Create Recipe</string>
+    <string name="title_recipe">Recipe</string>
+
+    <!-- NEW STRINGS -->
+    <string name="title_calendar">Food Calendar</string>
+    <string name="title_search">Search</string>
+    <string name="title_shoppinglist">Shopping List</string>
+
 
     <!-- Log in, sign up and user strings -->
     <string name="title_login">Log In</string>
@@ -17,7 +29,8 @@
     <string name="submitSignUp">Sign Up</string>
     <string name="noAccount">Do not have an account? Sign in here</string>
     <string name="logout">Log out</string>
-    <string name="title_activity_login">Sign in to Freyr</string>
+    <string name="title_activity_login">Log in to Freyr</string>
+    <string name="title_activity_signup">Sign up to Freyr</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Sign in or register</string>
@@ -26,5 +39,10 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    <string name="action_signup">Sign up</string>
+    <string name="action_login">Log in</string>
+    <string name="prompt_password_repeat">Repeated Password</string>
+    <string name="prompt_username">Username</string>
+    <string name="title_freyr">Freyr</string>
 
 </resources>

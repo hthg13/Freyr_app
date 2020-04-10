@@ -7,8 +7,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 
 import com.example.client.R;
+import com.example.client.data.entities.Recipe;
 import com.example.client.ui.Activities.Adapters.RecyclerAdapterCookBook;
-import com.example.client.ui.Activities.Adapters.RecyclerAdapterSearch;
 
 import java.util.ArrayList;
 
@@ -31,15 +31,17 @@ public class CookBookActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
 
         // Test data
-        int mynd = R.drawable.mynd;
-        int [] myndir = new int[2];
-        myndir[0]=mynd;
-        myndir[1]=mynd;
-        ArrayList<String> a = new ArrayList<>();
-        a.add("Lasagna");
-        a.add("Burger");
+        String image = "https://i.imgur.com/DvpvklR.png";
 
-        mAdapter = new RecyclerAdapterCookBook(a,myndir,this);
+        Recipe las = new Recipe("Lasagna",1234,image);
+
+        Recipe burg = new Recipe("Burger",1345, image);
+
+
+        ArrayList<Recipe> a = new ArrayList<>();
+        a.add(las);
+        a.add(burg);
+        mAdapter = new RecyclerAdapterCookBook(a,this);
         recyclerView.setAdapter(mAdapter);
     }
 }

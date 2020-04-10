@@ -16,6 +16,9 @@ import androidx.lifecycle.ViewModelProviders;
 import com.example.client.R;
 import com.example.client.data.entities.User;
 
+/**
+ * Setur upp síðuna profile þeas setur inn texta ofl
+ */
 public class ProfileFragment extends Fragment {
 
     private ProfileViewModel mProfileViewModel;
