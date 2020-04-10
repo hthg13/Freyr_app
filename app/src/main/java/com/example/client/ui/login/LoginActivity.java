@@ -15,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Parcelable;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
@@ -25,12 +26,17 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.client.R;
+import com.example.client.data.entities.User;
 import com.example.client.ui.login.LoginViewModel;
 import com.example.client.ui.login.LoginViewModelFactory;
+import com.example.client.ui.profile.ProfileFragment;
+import com.example.client.ui.profile.ProfileViewModel;
 
 public class LoginActivity extends AppCompatActivity {
 
     private LoginViewModel loginViewModel;
+    private String userLoginResults;
+    private ProfileViewModel mProfileViewModel;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -73,8 +79,12 @@ public class LoginActivity extends AppCompatActivity {
                 }
                 if (loginResult.getSuccess() != null) {
                     updateUiWithUser(loginResult.getSuccess());
+                    userLoginResults = loginResult.toString();
                 }
                 setResult(Activity.RESULT_OK);
+
+                // prufa helga
+
 
                 //Complete and destroy login activity once successful
                 finish();
@@ -120,16 +130,25 @@ public class LoginActivity extends AppCompatActivity {
                         passwordEditText.getText().toString());
             }
         });
+
+
     }
 
     private void updateUiWithUser(LoggedInUserView model) {
         String welcome = getString(R.string.welcome) + model.getDisplayName();
         // TODO : initiate successful logged in experience
+        // mProfileViewModel.setText(model.toString());
 
         //Intent returnIntent = new Intent();
         //returnIntent.putExtra("result", (Parcelable) model);
         //setResult(Activity.RESULT_OK,returnIntent);
         //finish();
+
+        //mProfileViewModel.setText(userLoginResults);
+        //Bundle bundle = new Bundle();
+        //bundle.putString("loginResults", model.getDisplayName());
+        //ProfileFragment profileFragment = new ProfileFragment();
+        //profileFragment.setArguments(bundle);
 
         Toast.makeText(getApplicationContext(), welcome, Toast.LENGTH_LONG).show();
     }

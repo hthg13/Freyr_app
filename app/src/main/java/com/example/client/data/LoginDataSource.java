@@ -2,7 +2,7 @@ package com.example.client.data;
 
 import android.util.Log;
 
-import com.example.client.data.entities.LoggedInUser;
+import com.example.client.data.entities.User;
 
 import java.io.IOException;
 
@@ -11,17 +11,15 @@ import java.io.IOException;
  */
 public class LoginDataSource {
 
-    public Result<LoggedInUser> login(String username, String password) {
+    public Result<User> login(String username, String password) {
 
         Log.d("helga", "username: " + username + " ,password: " + password);
 
         try {
             // TODO: handle loggedInUser authentication
-            LoggedInUser fakeUser =
-                    new LoggedInUser(
-                            java.util.UUID.randomUUID().toString(),
-                            "Jane Doe");
-            return new Result.Success<>(fakeUser);
+            //User fakeUser = new User(username);
+            User user = new User(1, username);
+            return new Result.Success<>(user);
         } catch (Exception e) {
             return new Result.Error(new IOException("Error logging in", e));
         }
