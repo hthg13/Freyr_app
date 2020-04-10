@@ -23,8 +23,7 @@ public class User {
     private int mScheduleId;
     private int mShoppingListId;
 
-    public User(long id, String userName, String password) {
-        this.mId = id;
+    public User(String userName, String password) {
         this.mUserName = userName;
         this.mPassword = password;
     }
@@ -83,5 +82,13 @@ public class User {
 
     public void setShoppingListId(int shoppingListId) {
         mShoppingListId = shoppingListId;
+    }
+
+    @Override
+    public String toString() {
+        String username = this.mUserName;
+        String password = this.mPassword;
+
+        return "Username: " + username + ", Password: " + password;
     }
 }

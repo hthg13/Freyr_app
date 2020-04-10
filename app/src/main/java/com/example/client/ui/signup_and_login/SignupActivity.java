@@ -1,17 +1,28 @@
 package com.example.client.ui.signup_and_login;
 
+import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.client.R;
+import com.example.client.data.Repositories.UserRepository;
+import com.example.client.data.entities.User;
+
+import java.util.List;
+import java.util.Objects;
 
 public class SignupActivity extends AppCompatActivity {
     private SignupViewModel mSignupViewModel;
+    private UserRepository mUserRepository;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -38,17 +49,50 @@ public class SignupActivity extends AppCompatActivity {
                     validPassword[0] = true;
                 }
 
+                // TODO HANDLE PASSWORD CHECK IF SAME AS FIRST ONE
+                /*
+                if (String.valueOf(passwordEditText2.getText()).isEmpty()) {
+                    passwordEditText2.setError("Enter user name");
+                    validName[0] = false;
+                } else {
+                    validName[0] = true;
+                }
+                */
+
                 if (String.valueOf(usernameEditText.getText()).isEmpty()) {
                     usernameEditText.setError("Enter user name");
                     validName[0] = false;
                 } else {
                     validName[0] = true;
                 }
-
+                
+                // TODO SINGUP LOGIC
                 // todo does username exist else create user and login?
-
                 if (validPassword[0] && validName[0]) {
+                    User user = new User(usernameEditText.getText().toString(), passwordEditText.getText().toString());
+
+                    mSignupViewModel.insert(user);
+
+                    Log.d("helga: ", user.toString());
+
+                    //Log.d("helga: ", "all users: " + users.getValue());
+
                     finish();
+                }
+            }
+        });
+
+        /*
+         * prentar út id og notendanafn allra notendanna
+         */
+        mSignupViewModel.getAllUsers().observe(this, new Observer<List<User>>() {
+            @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+            @Override
+            public void onChanged(List<User> users) {
+                List<User> userName = Objects.requireNonNull(users);
+
+                for (int i = 0; i<users.size(); i++) {
+                    Log.d("helga", "user number " + i + " has id " + userName.get(i).getId() + " and username " + userName.get(i).getUserName());
                 }
             }
         });

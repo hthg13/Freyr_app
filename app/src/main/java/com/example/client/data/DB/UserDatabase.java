@@ -12,30 +12,16 @@ import com.example.client.data.entities.User;
 @Database(entities = {User.class}, version = 1, exportSchema = false)
 public abstract class UserDatabase extends RoomDatabase {
 
+    private static UserDatabase instance;
     public abstract UserDao mUserDao();
-    private static UserDatabase INSTANCE;
 
-    public static UserDatabase getDatabase(final Context context) {
-
-        if (INSTANCE == null) {
-
-            synchronized (UserDatabase.class) {
-
-                if (INSTANCE == null) {
-
-                    INSTANCE = Room.databaseBuilder(
-                            context, UserDatabase.class, "USER_DATABASE")
-                            .fallbackToDestructiveMigration()
-                            .build();
-
-                }
-
-            }
-
+    public static synchronized UserDatabase getInstance(Context context){
+        if (instance==null){
+            instance = Room.databaseBuilder(context.getApplicationContext(), UserDatabase.class, "user_database")
+                    .fallbackToDestructiveMigration()
+                    .build();
         }
-
-        return INSTANCE;
-
+        return instance;
     }
 
 }
