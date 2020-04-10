@@ -10,6 +10,7 @@ import com.example.client.data.DB.UserDatabase;
 import com.example.client.data.entities.User;
 
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 public class UserRepository {
 
@@ -75,6 +76,16 @@ public class UserRepository {
 
         QueryAsyncTask task = new QueryAsyncTask(mUserDao);
         task.execute(param);
+    }
+
+    public User getUserInfoByName(String username) throws ExecutionException, InterruptedException {
+        String type = "getUserInfoByName";
+
+        GetUserInfoByName task = new GetUserInfoByName(mUserDao);
+        task.execute(username);
+        return task.get();
+
+        //return mUserDao.getUserInfoByName(username);
     }
 
     /**
@@ -148,6 +159,22 @@ public class UserRepository {
         protected Void doInBackground(User... users) {
             mUserDao.deleteUser(users[0]);
             return null;
+        }
+    }
+
+    /**
+     * select from db all about the user
+     */
+    private static class GetUserInfoByName extends AsyncTask<String, Void, User> {
+        private UserDao mUserDao;
+
+        GetUserInfoByName(UserDao dao) {
+            mUserDao = dao;
+        }
+
+        @Override
+        protected User doInBackground(String... strings) {
+            return mUserDao.getUserInfoByName(strings[0]);
         }
     }
 }

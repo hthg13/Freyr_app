@@ -10,6 +10,7 @@ import com.example.client.data.Repositories.UserRepository;
 import com.example.client.data.entities.User;
 
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 /**
  * performes as a viewModel for all these three ActivityClasses:
@@ -55,5 +56,9 @@ public class UserViewModel extends AndroidViewModel {
 
     public void updateUserShoppingListId(int shoppinglistid, long userid) {
         mUserRepository.updateUserCookbookId(shoppinglistid,userid);
+    }
+
+    public User getUserInfoByName(String username) throws ExecutionException, InterruptedException {
+        return mUserRepository.getUserInfoByName(username);
     }
 }

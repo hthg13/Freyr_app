@@ -105,6 +105,13 @@ public class SignupActivity extends AppCompatActivity {
         startActivityForResult(activitySignupOrLogin, SIGNUPORLOGIN_REQUEST_CODE);
     }
 
+    @Override
+    public void onRestart() {
+        super.onRestart();
+        finish();
+        startActivity(getIntent());
+    }
+
     private boolean doesNameExist(final String enteredUserName) {
         List<User> userName = getAllUsers();
         for (int i = 0; i<userName.size(); i++) {

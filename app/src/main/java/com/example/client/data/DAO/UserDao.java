@@ -34,4 +34,6 @@ public interface UserDao {
     @Query("UPDATE user_table set mShoppingListId = :shoppinglistid where mId = :userid")
     void updateUserShoppingListId(int shoppinglistid, long userid);
 
+    @Query("SELECT mUserName, mId, mPassword, mCookbookId, mScheduleId, mShoppingListId FROM user_table where mUserName=:username")
+    User getUserInfoByName(String username);
 }

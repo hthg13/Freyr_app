@@ -1,36 +1,41 @@
 package com.example.client.ui.signup_and_login;
 
 import androidx.annotation.RequiresApi;
-import androidx.lifecycle.LiveData;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 
 import com.example.client.R;
 import com.example.client.data.entities.User;
-import com.example.client.ui.profile.ProfileViewModel;
+import com.example.client.utilities.TokenStore;
 
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 public class LoginActivity extends AppCompatActivity {
 
+    private static final String TOKEN_PREFERENCE = "TOKEN_PREFERENCE";
+    SharedPreferences mSharedPreferences;
+
     private UserViewModel mLoginViewModel;
-    private ProfileViewModel mProfileViewModel;
     private boolean validInput;
     private List<User> allUsers;
     private int SIGNUPORLOGIN_REQUEST_CODE = 0;
     private boolean mExists;
     private boolean mMatch;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -39,6 +44,8 @@ public class LoginActivity extends AppCompatActivity {
         mLoginViewModel = ViewModelProviders.of(LoginActivity.this).get(UserViewModel.class);
 
         setAllUsers(mLoginViewModel.getAllUsers().getValue());
+
+        mSharedPreferences = getSharedPreferences(TOKEN_PREFERENCE, Context.MODE_PRIVATE);
 
         final EditText usernameEditText = findViewById(R.id.username);
         final EditText passwordEditText = findViewById(R.id.password);
@@ -84,6 +91,16 @@ public class LoginActivity extends AppCompatActivity {
 
 
                 if (validPassword[0] && validName[0]) {
+                    User user = null;
+                    try {
+                        user = mLoginViewModel.getUserInfoByName(enteredUserName);
+                    } catch (ExecutionException e) {
+                        e.printStackTrace();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+
+                    TokenStore.storeUser(mSharedPreferences, user);
                     finish();
                 }
             }
@@ -97,6 +114,13 @@ public class LoginActivity extends AppCompatActivity {
     public void onBackPressed() {
         Intent activitySignupOrLogin = new Intent(this, SignupOrLoginActivity.class);
         startActivityForResult(activitySignupOrLogin, SIGNUPORLOGIN_REQUEST_CODE);
+    }
+
+    @Override
+    public void onRestart() {
+        super.onRestart();
+        finish();
+        startActivity(getIntent());
     }
 
     private boolean doesNameExist(final String enteredUserName) {
