@@ -1,6 +1,8 @@
 package com.example.client.ui.signup_and_login;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -13,7 +15,10 @@ import androidx.lifecycle.ViewModelProviders;
 import com.example.client.R;
 import com.example.client.data.Repositories.UserRepository;
 import com.example.client.data.entities.User;
+import com.example.client.utilities.TokenStore;
+
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 public class SignupActivity extends AppCompatActivity {
     private UserViewModel mSignupViewModel;
@@ -23,11 +28,15 @@ public class SignupActivity extends AppCompatActivity {
     private List<User> allUsers;
     private int SIGNUPORLOGIN_REQUEST_CODE = 0;
 
+    private static final String TOKEN_PREFERENCE = "TOKEN_PREFERENCE";
+    SharedPreferences mSharedPreferences;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
         mSignupViewModel = ViewModelProviders.of(SignupActivity.this).get(UserViewModel.class);
+        mSharedPreferences = getSharedPreferences(TOKEN_PREFERENCE, Context.MODE_PRIVATE);
 
         final EditText usernameEditText = findViewById(R.id.username);
         final EditText passwordEditText1 = findViewById(R.id.password);
@@ -90,6 +99,17 @@ public class SignupActivity extends AppCompatActivity {
                 if (validPassword1[0] && validPassword2[0] && validName[0]) {
                     User user = new User(usernameEditText.getText().toString(), passwordEditText1.getText().toString());
                     mSignupViewModel.insert(user);
+
+                    try {
+                        user = mSignupViewModel.getUserInfoByName(enteredUserName);
+                    } catch (ExecutionException e) {
+                        e.printStackTrace();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+
+                    TokenStore.storeUser(mSharedPreferences, user);
+
                     finish();
                 }
             }
