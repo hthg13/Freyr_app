@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Choose ingredients"
+                    android:textSize="24sp"
+                    tools:ignore="MissingConstraints" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/FruitSection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fruits"
+                    android:textSize="18sp"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="5dp"
+                    tools:layout_editor_absoluteY="39dp" />
+            </TableRow>
+
+            <TableRow>
+                <CheckBox
+                    android:id="@+id/apple"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="apple"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/apricot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="apricot"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/banana"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="banana"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/berries"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="berries"
+                    tools:ignore="MissingConstraints" />
+
+            </TableRow>
+            <TableRow>
+                <CheckBox
+                    android:id="@+id/blackberry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="blackberry"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/blueberry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="blueberry"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/boysenberry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="boysenberry"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/cantaloupe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="cantaloupe"
+                    tools:ignore="MissingConstraints"/>
+            </TableRow>
+            <TableRow>
+                <CheckBox
+                    android:id="@+id/cherry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="cherry"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/clementine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="clementine"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/coconut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="coconut"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/crabapples"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="crabapples"
+                    tools:ignore="MissingConstraints"/>
+            </TableRow>
+            <TableRow>
+                <CheckBox
+                    android:id="@+id/craisins"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="craisins"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/cranberry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="cranberry"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/currant"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="currant"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="date"
+                    tools:ignore="MissingConstraints"/>
+            </TableRow>
+            <TableRow>
+                <CheckBox
+                    android:id="@+id/fig"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="fig"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/grape"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="grape"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/grapefruit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="grapefruit"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/guava"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="guava"
+                    tools:ignore="MissingConstraints"/>
+            </TableRow>
+            <TableRow>
+                <CheckBox
+                    android:id="@+id/honeydew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="honeydew"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/kiwi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="kiwi"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/kumquat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="kumquat"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/lemon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="lemon"
+                    tools:ignore="MissingConstraints"/>
+            </TableRow>
+            <TableRow>
+                <CheckBox
+                    android:id="@+id/lime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="lime"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/lingonberry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="lingonberry"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/lychee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="lychee"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/mandarin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="mandarin"
+                    tools:ignore="MissingConstraints"/>
+            </TableRow>
+            <TableRow>
+                <CheckBox
+                    android:id="@+id/mango"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="mango"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/nectarine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="nectarine"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/orange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="orange"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/papaya"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="papaya"
+                    tools:ignore="MissingConstraints"/>
+            </TableRow>
+            <TableRow>
+                <CheckBox
+                    android:id="@+id/passion_fruit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="passion fruit"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/peach"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="peach"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/pear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="pear"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/persimmons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="persimmons"
+                    tools:ignore="MissingConstraints"/>
+            </TableRow>
+            <TableRow>
+                <CheckBox
+                    android:id="@+id/pineapple"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="pineapple"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/plantain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="plantain"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/plum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="plum"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/pomegranate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="pomegranate"
+                    tools:ignore="MissingConstraints"/>
+            </TableRow>
+            <TableRow>
+                <CheckBox
+                    android:id="@+id/prunes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="prunes"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/quince"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="quince"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/raisin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="raisin"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/raspberry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="raspberry"
+                    tools:ignore="MissingConstraints"/>
+            </TableRow>
+            <TableRow>
+                <CheckBox
+                    android:id="@+id/rhubarb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="rhubarb"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/star_fruit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="star fruit"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/strawberry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="strawberry"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/sultanas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="sultanas"
+                    tools:ignore="MissingConstraints"/>
+            </TableRow>
+            <TableRow>
+                <CheckBox
+                    android:id="@+id/tangelos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="tangelos"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/tangerine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="tangerine"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/watermelon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="watermelon"
+                    tools:ignore="MissingConstraints" />
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/Dairy_and_alternativesSection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dairy and alternatives"
+                    android:textSize="18sp"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="5dp"
+                    tools:layout_editor_absoluteY="39dp" />
+            </TableRow>
+            <TableRow>
+                <CheckBox
+                    android:id="@+id/asiago"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="asiago"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/brie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="brie"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/butter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="butter"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/buttermilk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="buttermilk"
+                    tools:ignore="MissingConstraints"/>
+            </TableRow>
+            <TableRow>
+                <CheckBox
+                    android:id="@+id/cheddar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="cheddar"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/cream"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="cream"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/custard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="custard"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/feta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="feta"
+                    tools:ignore="MissingConstraints"/>
+            </TableRow>
+            <TableRow>
+                <CheckBox
+                    android:id="@+id/fontina"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="fontina"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/frosting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="frosting"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/ghee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ghee"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/gouda"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="gouda"
+                    tools:ignore="MissingConstraints"/>
+            </TableRow>
+            <TableRow>
+                <CheckBox
+                    android:id="@+id/gruyere"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="gruyere"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/halloumi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="halloumi"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/manchego"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="manchego"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/margarine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="margarine"
+                    tools:ignore="MissingConstraints"/>
+            </TableRow>
+            <TableRow>
+                <CheckBox
+                    android:id="@+id/mascarpone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="mascarpone"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/milk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="milk"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/mozzarella"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="mozzarella"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/muenster"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="muenster"
+                    tools:ignore="MissingConstraints"/>
+            </TableRow>
+            <TableRow>
+                <CheckBox
+                    android:id="@+id/neufchatel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="neufchatel"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/paneer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="paneer"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/parmesan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="parmesan"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/provolone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="provolone"
+                    tools:ignore="MissingConstraints"/>
+            </TableRow>
+            <TableRow>
+                <CheckBox
+                    android:id="@+id/ricotta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ricotta"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/romano"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="romano"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/velveeta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="velveeta"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox
+                    android:id="@+id/yogurt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="yogurt"
+                    tools:ignore="MissingConstraints"/>
+            </TableRow>
+
+                <Button
+                    android:id="@+id/to_meat_and_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:enabled="true"
+                    android:text="Next page"
+                    />
+
+        </TableLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
