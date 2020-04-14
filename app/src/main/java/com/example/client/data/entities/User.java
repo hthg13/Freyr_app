@@ -1,11 +1,13 @@
 package com.example.client.data.entities;
 
+import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 import com.example.client.data.entities.CookBook;
 import com.example.client.data.entities.Schedule;
 import com.example.client.data.entities.ShoppingList;
+
 @Entity(tableName = "user_table")
 public class User {
 
@@ -17,14 +19,13 @@ public class User {
     private String mUserName;
     private String mEmail;
     private String mPassword;
-    private CookBook mCookbook;
-    private Schedule mSchedule;
-    private ShoppingList mShoppingList;
+    private int mCookbookId; //todo er ekki í lagi að vísa í id frekar en hlutinn? það er ekki hægt að geyma sérútbúna hluti í room db ...
+    private int mScheduleId;
+    private int mShoppingListId;
 
-
-    public User(long id, String userName) {
-        this.mId = id;
+    public User(String userName, String password) {
         this.mUserName = userName;
+        this.mPassword = password;
     }
 
     public long getId() {
@@ -59,27 +60,35 @@ public class User {
         mPassword = password;
     }
 
-    public CookBook getCookbook() {
-        return mCookbook;
+    public int getCookbookId() {
+        return mCookbookId;
     }
 
-    public void setCookbook(CookBook cookbook) {
-        mCookbook = cookbook;
+    public void setCookbookId(int cookbookId) {
+        mCookbookId = cookbookId;
     }
 
-    public Schedule getSchedule() {
-        return mSchedule;
+    public int getScheduleId() {
+        return mScheduleId;
     }
 
-    public void setSchedule(Schedule schedule) {
-        mSchedule = schedule;
+    public void setScheduleId(int scheduleId) {
+        mScheduleId = scheduleId;
     }
 
-    public ShoppingList getShoppingList() {
-        return mShoppingList;
+    public int getShoppingListId() {
+        return mShoppingListId;
     }
 
-    public void setShoppingList(ShoppingList shoppingList) {
-        mShoppingList = shoppingList;
+    public void setShoppingListId(int shoppingListId) {
+        mShoppingListId = shoppingListId;
+    }
+
+    @Override
+    public String toString() {
+        String username = this.mUserName;
+        String password = this.mPassword;
+
+        return "Username: " + username + ", Password: " + password;
     }
 }

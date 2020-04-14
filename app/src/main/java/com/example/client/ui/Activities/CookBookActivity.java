@@ -32,7 +32,9 @@ public class CookBookActivity extends AppCompatActivity {
 
         // Test data
         String image = "https://i.imgur.com/DvpvklR.png";
-        Recipe las = new Recipe("Lasagna",1234,image );
+
+        Recipe las = new Recipe("Lasagna",1234,image);
+
         Recipe burg = new Recipe("Burger",1345, image);
 
 
