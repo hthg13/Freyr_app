@@ -2,34 +2,29 @@ package com.example.client.ui.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.client.MainActivity;
 import com.example.client.R;
 import com.example.client.data.entities.Recipe;
-import com.example.client.ui.Activities.Adapters.RecyclerAdapterCookBook;
-import com.example.client.ui.Activities.Adapters.RecyclerAdapterSearch;
+import com.example.client.utilities.RecipeMapper;
 import com.mashape.unirest.http.exceptions.UnirestException;
 
 import org.json.JSONException;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 public class SearchActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
-    private RecipeMapper d = new RecipeMapper();
+    private RecipeMapper recipeMapper = new RecipeMapper();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,7 +81,7 @@ public class SearchActivity extends AppCompatActivity {
 
                 ArrayList<Recipe> recipes = null;
                 try {
-                    recipes = d.getResultsTitleType(string_title_input.getText().toString(),userChoices.get(0));
+                    recipes = recipeMapper.getResultsTitleType(string_title_input.getText().toString(),userChoices.get(0));
                 } catch (UnirestException e) {
                     e.printStackTrace();
                 } catch (InterruptedException e) {

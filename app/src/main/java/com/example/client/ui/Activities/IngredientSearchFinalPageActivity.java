@@ -16,12 +16,18 @@ import com.example.client.R;
 import com.example.client.data.entities.Recipe;
 import com.example.client.ui.Activities.Adapters.RecyclerAdapterCookBook;
 import com.example.client.ui.Activities.Adapters.RecyclerAdapterSearch;
+import com.example.client.utilities.RecipeMapper;
+import com.mashape.unirest.http.exceptions.UnirestException;
+
+import org.json.JSONException;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 public class IngredientSearchFinalPageActivity extends AppCompatActivity {
     private ArrayList<String> userChoices = new ArrayList<>();
+    private RecipeMapper recipeMapper = new RecipeMapper();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -229,10 +235,26 @@ public class IngredientSearchFinalPageActivity extends AppCompatActivity {
                     System.out.println(item);
                 }
 
-                //Intent results = new Intent(IngredientSearchFinalPageActivity.this, SearchResultsActivity.class);
-                //Þarf væntanlega að henda hér í mapperinn og svo nota extra dótið til að flytja milli
-                //results.putExtra("ingredients", userChoices); //Svona setur maður dótið inn
-                //IngredientSearchFinalPageActivity.this.startActivity(results);
+                ArrayList<Recipe> recipes = null;
+                try {
+                    recipes = recipeMapper.getResultsIngr(userChoices);
+                } catch (UnirestException e) {
+                    e.printStackTrace();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                } catch (ExecutionException e) {
+                    e.printStackTrace();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+                Intent results = new Intent(IngredientSearchFinalPageActivity.this, SearchResultsActivity.class);
+                Bundle b = new Bundle();
+                b.putSerializable("recipes",recipes);
+                System.out.println(recipes.size());
+                results.putExtras(b);
+                IngredientSearchFinalPageActivity.this.startActivity(results);
+
 
 
             }

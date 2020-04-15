@@ -5,11 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-<<<<<<< HEAD
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
+
 
         <Switch
             android:id="@+id/title_search"
@@ -126,151 +128,14 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-    </LinearLayout>
+    </LinearLayout><![CDATA[
 =======
-    <Button
-        android:id="@+id/string_search_button"
-        android:layout_width="341dp"
-        android:layout_height="44dp"
-        android:layout_marginStart="105dp"
-        android:layout_marginLeft="105dp"
-        android:layout_marginEnd="106dp"
-        android:layout_marginRight="106dp"
-        android:layout_marginBottom="440dp"
-        android:background="#009688"
-        android:text="Search"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent" />
 
-    <CheckBox
-        android:id="@+id/is_breakfast"
-        android:layout_width="112dp"
-        android:layout_height="28dp"
-        android:layout_marginTop="10dp"
-        android:text="Breakfast"
-        app:layout_constraintBottom_toTopOf="@+id/is_sauce"
-        app:layout_constraintEnd_toStartOf="@+id/is_lunch"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/is_appetizer" />
 
-    <CheckBox
-        android:id="@+id/is_sauce"
-        android:layout_width="112dp"
-        android:layout_height="28dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="20dp"
-        android:text="Sauce"
-        app:layout_constraintBottom_toTopOf="@+id/string_search_button"
-        app:layout_constraintEnd_toStartOf="@+id/is_beverage"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/is_breakfast" />
 
-    <CheckBox
-        android:id="@+id/is_lunch"
-        android:layout_width="112dp"
-        android:layout_height="28dp"
-        android:layout_marginTop="10dp"
-        android:text="Lunch"
-        app:layout_constraintBottom_toTopOf="@+id/is_beverage"
-        app:layout_constraintEnd_toStartOf="@+id/is_dinner"
-        app:layout_constraintStart_toEndOf="@+id/is_breakfast"
-        app:layout_constraintTop_toBottomOf="@+id/is_main_course" />
 
-    <CheckBox
-        android:id="@+id/is_dinner"
-        android:layout_width="112dp"
-        android:layout_height="28dp"
-        android:layout_marginTop="10dp"
-        android:text="Dinner"
-        app:layout_constraintBottom_toTopOf="@+id/is_side_dish"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/is_lunch"
-        app:layout_constraintTop_toBottomOf="@+id/is_dessert" />
 
-    <CheckBox
-        android:id="@+id/is_beverage"
-        android:layout_width="112dp"
-        android:layout_height="28dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="20dp"
-        android:text="Beverage"
-        app:layout_constraintBottom_toTopOf="@+id/string_search_button"
-        app:layout_constraintEnd_toStartOf="@+id/is_side_dish"
-        app:layout_constraintStart_toEndOf="@+id/is_sauce"
-        app:layout_constraintTop_toBottomOf="@+id/is_lunch" />
+    >>>>>>> origin/master
 
-    <CheckBox
-        android:id="@+id/is_side_dish"
-        android:layout_width="112dp"
-        android:layout_height="28dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="20dp"
-        android:text="Side Dish"
-        app:layout_constraintBottom_toTopOf="@+id/string_search_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/is_beverage"
-        app:layout_constraintTop_toBottomOf="@+id/is_dinner" />
-
-    <CheckBox
-        android:id="@+id/is_main_course"
-        android:layout_width="112dp"
-        android:layout_height="28dp"
-        android:layout_marginTop="20dp"
-        android:text="Main Course"
-        app:layout_constraintBottom_toTopOf="@+id/is_lunch"
-        app:layout_constraintEnd_toStartOf="@+id/is_dessert"
-        app:layout_constraintStart_toEndOf="@+id/is_appetizer"
-        app:layout_constraintTop_toBottomOf="@+id/string_title_input" />
-
-    <CheckBox
-        android:id="@+id/is_dessert"
-        android:layout_width="112dp"
-        android:layout_height="28dp"
-        android:layout_marginTop="20dp"
-        android:text="Dessert"
-        app:layout_constraintBottom_toTopOf="@+id/is_dinner"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/is_main_course"
-        app:layout_constraintTop_toBottomOf="@+id/string_title_input" />
-
-    <CheckBox
-        android:id="@+id/is_appetizer"
-        android:layout_width="112dp"
-        android:layout_height="28dp"
-        android:layout_marginTop="20dp"
-        android:text="Appetizer"
-        app:layout_constraintBottom_toTopOf="@+id/is_breakfast"
-        app:layout_constraintEnd_toStartOf="@+id/is_main_course"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/string_title_input" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/string_title_input"
-        android:layout_width="357dp"
-        android:layout_height="45dp"
-        android:hint="What do you want to eat?"
-        android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/is_main_course"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/is_lunch"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="236dp"
-        android:layout_marginEnd="2dp"
-        android:layout_marginRight="2dp"
-        android:layout_marginBottom="204dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/string_search_button">
-
-    </com.google.android.material.textfield.TextInputLayout>
->>>>>>> origin/master
-
+]]>
 </androidx.constraintlayout.widget.ConstraintLayout>

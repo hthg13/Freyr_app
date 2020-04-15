@@ -1,4 +1,4 @@
-package com.example.client.ui.Activities;
+package com.example.client.utilities;
 
 
 import android.os.AsyncTask;
@@ -21,8 +21,8 @@ import org.json.JSONObject;
 public class RecipeMapper {
 
     private String baseUri = "https://spoonacular.com/recipeImages/";
-    private String ingrURL = "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/findByIngredients?number=30&ranking=1&ignorePantry=false&ingredients=";
-    private String titleURL[] = {"https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?number=30&offset=0&type=", "&query="};
+    private String ingrURL = "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/findByIngredients?number=10&ranking=1&ignorePantry=false&ingredients=";
+    private String titleURL[] = {"https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?number=10&offset=0&type=", "&query="};
     private String infoURL[] = {"https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/", "/information"};
 
     // Fa lista af uppskriftum eftir hráefnum
@@ -89,14 +89,11 @@ public class RecipeMapper {
         JSONObject obj = new JSONObject("{results :["+response+"]}");
         JSONArray r = obj.getJSONArray("results");
         recipe.setInstructions(r.getJSONObject(0).getString("instructions"));
-        recipe.setReadyInMin(r.getJSONObject(0).getInt("readyInMinutes"));
-        recipe.setServings(r.getJSONObject(0).getInt("servings"));
 
         JSONArray ingr = r.getJSONObject(0).getJSONArray("extendedIngredients");
 
         for(int i = 0; i<ingr.length(); i++){
             recipe.addIngredients(ingr.getJSONObject(i).getString("original"));
-            System.out.println(ingr.getJSONObject(i).getString("original"));
         }
         System.out.println(recipe.getIngredients().size());
 
@@ -117,8 +114,6 @@ public class RecipeMapper {
             object.setIndex(i);
             object.setTitle(element.getString("title"));
 
-            //this.getDetails(object);
-
             if(element.has("image")){
                 //Mismunandi hvort þarf að bæta við baseUri eða ekki
                 if(element.getString("image").contains("https") ){
@@ -128,32 +123,15 @@ public class RecipeMapper {
                 }
             }
 
-
             recipes.add(object);
         }
 
         return recipes;
     }
 
-  /*
 
- /// Óþarft held ég
 
-    private ArrayList<Recipe> ingrResultsToRecipe(String json) {
-        ArrayList<Recipe> recipes = new ArrayList();
-        JSONObject obj = new JSONObject(json);
-        JSONArray r = obj.getJSONArray("results");
-        for (int i = 0; i < r.length(); i++) {
-            JSONObject element = r.getJSONObject(i);
-            Recipe object = new Recipe();
-            object.setId(element.getInt("id"));
-            object.setTitle(element.getString("title"));
-            object.setImage(element.getString("image"));
-            recipes.add(object);
-        }
-        System.out.println(recipes.get(0).toString());
-        return recipes;
-    }*/
+
 
     private String request(String url) throws UnirestException, ExecutionException, InterruptedException {
        /* HttpResponse<String> response = Unirest.get(url)
@@ -177,6 +155,7 @@ public class RecipeMapper {
             String stringUrl = params[0];
             HttpResponse<String> response = null;
             try {
+
                 response = Unirest.get(stringUrl)
                         .header("x-rapidapi-host", "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com")
                         .header("x-rapidapi-key", "95e63d77d8mshcd6163a94d2be7bp15c756jsn981c624f96fc")
@@ -184,7 +163,8 @@ public class RecipeMapper {
             } catch (UnirestException e) {
                 e.printStackTrace();
             }
-            System.out.println(response);
+
+
             return response.getBody();
         }
         protected void onPostExecute(String result){

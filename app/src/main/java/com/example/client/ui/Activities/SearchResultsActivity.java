@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.client.R;
 import com.example.client.data.entities.Recipe;
 import com.example.client.ui.Activities.Adapters.RecyclerAdapterSearch;
+import com.example.client.utilities.RecipeMapper;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -46,10 +47,7 @@ public class SearchResultsActivity extends AppCompatActivity {
 
     }
 
-    @Override
-    public void onBackPressed() {
-        finish();
-    }
+
 
 
 }

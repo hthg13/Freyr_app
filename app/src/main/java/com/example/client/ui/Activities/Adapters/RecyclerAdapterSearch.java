@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.client.R;
 import com.example.client.data.entities.Recipe;
-import com.example.client.ui.Activities.RecipeMapper;
+import com.example.client.utilities.RecipeMapper;
 import com.example.client.ui.Activities.RecipeViewActivity;
 import com.mashape.unirest.http.exceptions.UnirestException;
 import com.squareup.picasso.Callback;
