@@ -2,12 +2,14 @@ package com.example.client.ui.signup_and_login;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.example.client.MainActivity;
 import com.example.client.R;
 
 
@@ -16,7 +18,6 @@ import com.example.client.R;
  * passes on a string witch one was chosen back to main activity
  */
 public class SignupOrLoginActivity extends AppCompatActivity {
-
     private UserViewModel mSignupOrLoginViewModel;
 
     @Override
@@ -28,6 +29,11 @@ public class SignupOrLoginActivity extends AppCompatActivity {
         final Button loginButton = findViewById(R.id.login);
         final Button signupButton = findViewById(R.id.signup);
         final String[] logorsign = new String[1];
+
+        check(loginButton, signupButton, logorsign);
+    }
+
+    private void check(Button loginButton, Button signupButton, final String[] logorsign) {
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,12 +58,11 @@ public class SignupOrLoginActivity extends AppCompatActivity {
         });
     }
 
+
+    private int SIGNUPORLOGIN_REQUEST_CODE = 0;
     @Override
-    public void onRestart() {
-        super.onRestart();
-        finish();
-        startActivity(getIntent());
+    public void onBackPressed() {
+        Intent intent = new Intent(SignupOrLoginActivity.this, MainActivity.class);
+        startActivity(intent);
     }
-
-
 }

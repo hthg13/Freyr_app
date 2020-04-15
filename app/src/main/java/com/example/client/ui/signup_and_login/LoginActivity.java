@@ -12,11 +12,11 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.client.MainActivity;
 import com.example.client.R;
 import com.example.client.data.entities.User;
 import com.example.client.utilities.TokenStore;
@@ -112,15 +112,8 @@ public class LoginActivity extends AppCompatActivity {
      */
     @Override
     public void onBackPressed() {
-        Intent activitySignupOrLogin = new Intent(this, SignupOrLoginActivity.class);
-        startActivityForResult(activitySignupOrLogin, SIGNUPORLOGIN_REQUEST_CODE);
-    }
-
-    @Override
-    public void onRestart() {
-        super.onRestart();
-        finish();
-        startActivity(getIntent());
+        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+        startActivity(intent);
     }
 
     private boolean doesNameExist(final String enteredUserName) {
