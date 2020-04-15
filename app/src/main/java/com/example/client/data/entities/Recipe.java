@@ -1,5 +1,8 @@
 package com.example.client.data.entities;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import androidx.room.Entity;
 import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
@@ -7,7 +10,8 @@ import androidx.room.PrimaryKey;
 import java.util.ArrayList;
 
 @Entity(tableName = "recipe_table")
-public class Recipe {
+public class Recipe implements Parcelable {
+
 
          /*
          * TODO skoða many to many relationship við cookbook
@@ -22,8 +26,33 @@ public class Recipe {
         private int readyInMin;
         private int servings;
         @Ignore
-        private ArrayList<String> ingredients;
+        private ArrayList<String> ingredients = new ArrayList<String>();
         private boolean fullInfo = false;
+
+    protected Recipe(Parcel in) {
+        id = in.readInt();
+        index = in.readString();
+        title = in.readString();
+        instructions = in.readString();
+        rating = in.readDouble();
+        image = in.readString();
+        readyInMin = in.readInt();
+        servings = in.readInt();
+        ingredients = in.createStringArrayList();
+        fullInfo = in.readByte() != 0;
+    }
+
+    public static final Creator<Recipe> CREATOR = new Creator<Recipe>() {
+        @Override
+        public Recipe createFromParcel(Parcel in) {
+            return new Recipe(in);
+        }
+
+        @Override
+        public Recipe[] newArray(int size) {
+            return new Recipe[size];
+        }
+    };
 
     public ArrayList<String> getIngredients() {
         return ingredients;
@@ -32,7 +61,9 @@ public class Recipe {
     public void setIngredients(ArrayList<String> ingredients) {
         this.ingredients = ingredients;
     }
-
+    public void addIngredients(String ingredients) {
+        this.ingredients.add(ingredients);
+    }
     /*
             TODO pæla í hvort id komi inn her eða verði autogen
              */
@@ -130,4 +161,22 @@ public class Recipe {
             return s;
         }
 
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(id);
+        dest.writeString(index);
+        dest.writeString(title);
+        dest.writeString(instructions);
+        dest.writeDouble(rating);
+        dest.writeString(image);
+        dest.writeInt(readyInMin);
+        dest.writeInt(servings);
+        dest.writeStringList(ingredients);
+        dest.writeByte((byte) (fullInfo ? 1 : 0));
+    }
 }
