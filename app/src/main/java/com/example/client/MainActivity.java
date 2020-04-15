@@ -9,8 +9,7 @@ import android.widget.Button;
 
 import com.example.client.ui.Activities.CookBookActivity;
 import com.example.client.ui.Activities.CreateRecipeActivity;
-import com.example.client.ui.Activities.IngredientOrTitleSearchActivity;
-import com.example.client.ui.Activities.IngredientSearchPageOneActivity;
+import com.example.client.ui.Activities.SearchActivity;
 import com.example.client.ui.signup_and_login.LoginActivity;
 import com.example.client.ui.signup_and_login.SignupActivity;
 import com.example.client.ui.signup_and_login.SignupOrLoginActivity;
@@ -95,16 +94,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent create = new Intent(MainActivity.this, CreateRecipeActivity.class);
-                MainActivity.this.startActivity(create);
-            }
-        });
-
-        Button button3 = (Button)findViewById(R.id.temp3);
-        //button3.setVisibility(View.INVISIBLE);
-            button3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent create = new Intent(MainActivity.this, IngredientOrTitleSearchActivity.class);
                 MainActivity.this.startActivity(create);
             }
         });

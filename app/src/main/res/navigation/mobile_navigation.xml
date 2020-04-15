@@ -19,9 +19,9 @@
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.example.client.ui.notifications.NotificationsFragment"
+        android:name="com.example.client.ui.search.IngredientOrTitleSearchFragment"
         android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_ingredient_or_title_search" />
 
     <fragment
         android:id="@+id/navigation_profile"

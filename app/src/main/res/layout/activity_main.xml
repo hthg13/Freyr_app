@@ -50,12 +50,6 @@
             android:layout_height="wrap_content"
             android:text="Timabundinn CookBook" />
 
-        <Button
-            android:id="@+id/temp3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Timabundinn Search" />
-
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

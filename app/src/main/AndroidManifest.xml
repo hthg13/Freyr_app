@@ -38,7 +38,6 @@
         <activity android:name=".ui.Activities.IngredientSearchPageTwoActivity" />
         <activity android:name=".ui.Activities.IngredientSearchPageThreeActivity" />
         <activity android:name=".ui.Activities.IngredientSearchFinalPageActivity" />
-        <activity android:name=".ui.Activities.IngredientOrTitleSearchActivity" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name">
