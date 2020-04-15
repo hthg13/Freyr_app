@@ -89,7 +89,6 @@ public class LoginActivity extends AppCompatActivity {
                     validPassword[0] = true;
                 }
 
-
                 if (validPassword[0] && validName[0]) {
                     User user = null;
                     try {

@@ -33,6 +33,10 @@
             android:name=".ui.signup_and_login.SignupOrLoginActivity"
             android:label="@string/title_freyr" />
 
+        <activity
+            android:name=".ui.profile.ProfileFragment"
+            android:label="@string/title_profile" />
+
         <activity android:name=".ui.Activities.SearchActivity" />
         <activity android:name=".ui.Activities.IngredientSearchPageOneActivity" />
         <activity android:name=".ui.Activities.IngredientSearchPageTwoActivity" />
