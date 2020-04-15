@@ -103,6 +103,7 @@ public class CreateRecipeActivity extends AppCompatActivity {
                 r.setTitle(title);
                 r.setIngredients(ingredients);
 
+
                 /*
                  *
                  * user.getCookbook().addRecipe
