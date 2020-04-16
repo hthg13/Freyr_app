@@ -23,6 +23,7 @@ import com.example.client.R;
 import com.example.client.data.entities.User;
 import com.example.client.ui.Activities.CookBookActivity;
 import com.example.client.ui.Activities.CreateRecipeActivity;
+import com.example.client.ui.Activities.ShoppingListActivity;
 import com.example.client.ui.signup_and_login.UserViewModel;
 import com.example.client.utilities.TokenStore;
 
