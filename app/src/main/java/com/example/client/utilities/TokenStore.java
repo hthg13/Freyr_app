@@ -15,6 +15,7 @@ public class TokenStore {
     private final static String USERNAME = "USER_NAME";
     private final static String USER_PW = "USER_PW";
     private final static ArrayList<Recipe> rs= new ArrayList<>();
+    private final static ArrayList<String> ls= new ArrayList<>();
 
     public static String getToken(SharedPreferences sharedPreferences) {
         return sharedPreferences.getString(TOKEN,"");
@@ -72,4 +73,6 @@ public class TokenStore {
         return rs;
     }
 
+    public static void addI(String s){ls.add(s);}
+    public static ArrayList<String> getList(){return ls;}
 }

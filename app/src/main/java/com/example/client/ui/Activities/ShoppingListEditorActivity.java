@@ -30,7 +30,7 @@ public class ShoppingListEditorActivity extends AppCompatActivity {
             ShoppingListActivity.shoppingLists.add("");
             shoppinglistId=ShoppingListActivity.shoppingLists.size()-1;
         }
-        editText.addTextChangedListener(new TextWatcher() {
+       /* editText.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -46,6 +46,6 @@ public class ShoppingListEditorActivity extends AppCompatActivity {
             public void afterTextChanged(Editable s) {
 
             }
-        });
+        });*/
     }
 }
