@@ -13,7 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.Activities.SearchResultsActivity"></activity>
+        <activity android:name=".ui.Activities.ShoppingListActivity"></activity>
+        <activity android:name=".ui.Activities.ShoppingListEditorActivity" />
+        <activity android:name=".ui.Activities.SearchResultsActivity" />
         <activity
             android:name=".ui.Activities.RecipeViewActivity"
             android:label="@string/title_recipe" />
@@ -32,7 +34,6 @@
         <activity
             android:name=".ui.signup_and_login.SignupOrLoginActivity"
             android:label="@string/title_freyr" />
-
         <activity android:name=".ui.Activities.SearchActivity" />
         <activity
             android:name=".MainActivity"
