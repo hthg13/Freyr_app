@@ -1,29 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- CHANGE TO CALENDAR -->
     <item
         android:id="@+id/navigation_home"
-        android:icon="@drawable/calendar_18dp"
-        android:title="@string/title_calendar"/>
-
-    <!-- CHANGE TO COOKBOOK -->
-    <item
-        android:id="@+id/navigation_dashboard"
-        android:icon="@drawable/cookbook_18dp"
-        android:title="@string/title_cookbook"/>
-
-    <!-- CHANGE TO SEARCH -->
-    <item
-        android:id="@+id/navigation_notifications"
         android:icon="@drawable/search_18dp"
         android:title="@string/title_search"/>
 
-    <!-- CHANGE TO SHOPPING LIST -->
-    <item
-        android:id="@+id/navigation_shoppingList"
-        android:icon="@drawable/shoppinglist_18dp"
-        android:title="@string/title_shoppinglist"/>
 
     <item
         android:id="@+id/navigation_profile"
