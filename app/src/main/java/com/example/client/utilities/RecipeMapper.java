@@ -17,6 +17,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import local.org.apache.http.conn.HttpClientConnectionManager;
+
 
 public class RecipeMapper {
 
@@ -141,8 +143,8 @@ public class RecipeMapper {
         System.out.println(response);
         return response.getBody();*/
        HttpGetRequest a= new HttpGetRequest();
-       String l =a.execute(url).get();
-       System.out.println(l);
+       String l =a.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, url).get();
+       System.out.println("done");
        return l;
     }
 
@@ -154,6 +156,7 @@ public class RecipeMapper {
         protected String doInBackground(String... params){
             String stringUrl = params[0];
             HttpResponse<String> response = null;
+
             try {
 
                 response = Unirest.get(stringUrl)
