@@ -44,5 +44,7 @@
     <string name="prompt_password_repeat">Repeated Password</string>
     <string name="prompt_username">Username</string>
     <string name="title_freyr">Freyr</string>
+    <string name="edamame">edamame</string>
+    <string name="dulse">dulse</string>
 
 </resources>

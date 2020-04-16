@@ -8,22 +8,23 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.client.MainActivity;
 import com.example.client.R;
 import com.example.client.data.entities.Recipe;
-import com.example.client.ui.Activities.Adapters.RecyclerAdapterCookBook;
-import com.example.client.ui.Activities.Adapters.RecyclerAdapterSearch;
+import com.example.client.utilities.RecipeMapper;
+import com.mashape.unirest.http.exceptions.UnirestException;
+
+import org.json.JSONException;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 public class SearchActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
+    private RecipeMapper recipeMapper = new RecipeMapper();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +48,7 @@ public class SearchActivity extends AppCompatActivity {
                     userChoices.add("appetizer");
                 }
                 if(((CheckBox)findViewById(R.id.is_main_course)).isChecked()){
-                    userChoices.add("main_course");
+                    userChoices.add("main course");
                 }
                 if(((CheckBox)findViewById(R.id.is_dessert)).isChecked()){
                     userChoices.add("dessert");
@@ -68,7 +69,7 @@ public class SearchActivity extends AppCompatActivity {
                     userChoices.add("beverage");
                 }
                 if(((CheckBox)findViewById(R.id.is_appetizer)).isChecked()){
-                    userChoices.add("side_dish");
+                    userChoices.add("side dish");
                 }
 
                 //No recipie database yet so we settle on printing the recived data for now
@@ -78,9 +79,26 @@ public class SearchActivity extends AppCompatActivity {
                 }
 
 
-
+                ArrayList<Recipe> recipes = null;
+                try {
+                    recipes = recipeMapper.getResultsTitleType(string_title_input.getText().toString(),userChoices.get(0));
+                } catch (UnirestException e) {
+                    e.printStackTrace();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                } catch (ExecutionException e) {
+                    e.printStackTrace();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
                 Intent results = new Intent(SearchActivity.this, SearchResultsActivity.class);
+                
+                Bundle b = new Bundle();
+                b.putParcelableArrayList("recipes",recipes);
+                System.out.println(recipes.size());
+                results.putExtras(b);
                 SearchActivity.this.startActivity(results);
+
             }
         });
     }

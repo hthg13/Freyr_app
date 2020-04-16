@@ -15,11 +15,16 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.client.R;
 import com.example.client.data.entities.Recipe;
+import com.example.client.utilities.RecipeMapper;
 import com.example.client.ui.Activities.RecipeViewActivity;
+import com.mashape.unirest.http.exceptions.UnirestException;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
+import org.json.JSONException;
+
 import java.util.ArrayList;
+import java.util.concurrent.ExecutionException;
 
 public class RecyclerAdapterSearch extends RecyclerView.Adapter<RecyclerAdapterSearch.RecipeViewHolder> {
 
@@ -39,6 +44,7 @@ public class RecyclerAdapterSearch extends RecyclerView.Adapter<RecyclerAdapterS
         ImageView image;
         Context context;
         ArrayList<Recipe> recipes;
+        RecipeMapper recipeMapper = new RecipeMapper();
 
         public RecipeViewHolder(View v, Context c, ArrayList<Recipe> r) {
             super(v);
@@ -57,9 +63,24 @@ public class RecyclerAdapterSearch extends RecyclerView.Adapter<RecyclerAdapterS
              */
 
             Intent recipeViewIntent= new Intent(this.context, RecipeViewActivity.class);
-            recipeViewIntent.putExtra("recipeImage", recipes.get(getAdapterPosition()).getImage());
-            recipeViewIntent.putExtra("recipeTitle", recipes.get(getAdapterPosition()).getTitle());
+            Recipe r = null;
+            System.out.println(recipes.get(getAdapterPosition()).getId());
+            try {
+                r = recipeMapper.getDetails(recipes.get(getAdapterPosition()));
+            } catch (JSONException e) {
+                e.printStackTrace();
+            } catch (UnirestException e) {
+                e.printStackTrace();
+            } catch (ExecutionException e) {
+                e.printStackTrace();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            recipeViewIntent.putExtra("recipe", r);
+            recipeViewIntent.putExtra("from","search");
             this.context.startActivity(recipeViewIntent);
+
+
         }
     }
 

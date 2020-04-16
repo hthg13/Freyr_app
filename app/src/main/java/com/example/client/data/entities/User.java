@@ -2,11 +2,14 @@ package com.example.client.data.entities;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 import com.example.client.data.entities.CookBook;
 import com.example.client.data.entities.Schedule;
 import com.example.client.data.entities.ShoppingList;
+
+import java.util.ArrayList;
 
 @Entity(tableName = "user_table")
 public class User {
@@ -19,7 +22,7 @@ public class User {
     private String mUserName;
     private String mEmail;
     private String mPassword;
-    private int mCookbookId; //todo er ekki í lagi að vísa í id frekar en hlutinn? það er ekki hægt að geyma sérútbúna hluti í room db ...
+    private int mCookbookId;
     private int mScheduleId;
     private int mShoppingListId;
 

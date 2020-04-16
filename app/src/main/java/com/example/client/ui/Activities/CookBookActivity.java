@@ -1,14 +1,25 @@
 package com.example.client.ui.Activities;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+
 import android.os.Bundle;
+import android.text.NoCopySpan;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import com.example.client.R;
 import com.example.client.data.entities.Recipe;
 import com.example.client.ui.Activities.Adapters.RecyclerAdapterCookBook;
+import com.example.client.ui.notifications.NotificationsViewModel;
+import com.example.client.ui.signup_and_login.UserViewModel;
+import com.example.client.utilities.TokenStore;
 
 import java.util.ArrayList;
 
@@ -20,28 +31,26 @@ public class CookBookActivity extends AppCompatActivity {
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
+
+        //UserViewModel = ViewModelProviders.of(this).get(NotificationsViewModel.class);
+       // View root = inflater.inflate(R.layout.activity_cook_book, container, false);
+
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_cook_book);
 
         recyclerView = (RecyclerView) findViewById(R.id.recycler);
+
         recyclerView.setHasFixedSize(false);
 
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-        // Test data
-        String image = "https://i.imgur.com/DvpvklR.png";
 
-        Recipe las = new Recipe("Lasagna",1234,image);
-
-        Recipe burg = new Recipe("Burger",1345, image);
-
-
-        ArrayList<Recipe> a = new ArrayList<>();
-        a.add(las);
-        a.add(burg);
-        mAdapter = new RecyclerAdapterCookBook(a,this);
+        mAdapter = new RecyclerAdapterCookBook(TokenStore.getRecipes(),this);
         recyclerView.setAdapter(mAdapter);
+
     }
+
 }

@@ -1,5 +1,7 @@
 package com.example.client.ui.Activities;
 
+import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -8,6 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.res.ResourcesCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -16,9 +19,11 @@ import java.util.ArrayList;
 
 import com.example.client.MainActivity;
 import com.example.client.R;
+import com.example.client.data.entities.CookBook;
 import com.example.client.data.entities.Recipe;
 import com.example.client.ui.Activities.Adapters.RecyclerAdapterCookBook;
 import com.example.client.ui.Activities.Adapters.RecyclerAdapterCreateRecipe;
+import com.example.client.utilities.TokenStore;
 
 public class CreateRecipeActivity extends AppCompatActivity {
 
@@ -97,11 +102,14 @@ public class CreateRecipeActivity extends AppCompatActivity {
                 EditText i = (EditText) findViewById(R.id.ingredient);
                 String fullIngr = q.getText()+" "+u.getText()+" "+i.getText();
 
-
                 Recipe r = new Recipe(title,1,"");
                 r.setInstructions(instructions);
                 r.setTitle(title);
-                r.setIngredients(ingredients);
+                r.setIngredients((ArrayList<String>)ingredients.clone());
+                System.out.println(ingredients.size());
+                r.setImage("mynd");
+
+                TokenStore.addRecipe(r);
 
                 /*
                  *
@@ -116,6 +124,7 @@ public class CreateRecipeActivity extends AppCompatActivity {
                 ingredients.clear();
                 mAdapter.notifyItemRangeRemoved(0,0);
                 mAdapter.notifyDataSetChanged();
+
             }
         });
 
