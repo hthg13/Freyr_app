@@ -76,9 +76,9 @@ public class MainActivity extends AppCompatActivity {
         //
         // Til að geta prófað cookbook og create
         //
-        Button button = (Button)findViewById(R.id.temp);
+   /*     Button button = (Button)findViewById(R.id.temp);
         //button.setVisibility(View.INVISIBLE);
-            button.setOnClickListener(new View.OnClickListener() {
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent cookbook = new Intent(MainActivity.this, CookBookActivity.class);
@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button button2 = (Button)findViewById(R.id.temp2);
         //button2.setVisibility(View.INVISIBLE);
-            button2.setOnClickListener(new View.OnClickListener() {
+        button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent create = new Intent(MainActivity.this, CreateRecipeActivity.class);
@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent create = new Intent(MainActivity.this, IngredientOrTitleSearchFragment.class);
                 MainActivity.this.startActivity(create);
             }
-        });
+        });*/
     }
 
 
