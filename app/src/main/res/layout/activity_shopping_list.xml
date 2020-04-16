@@ -11,8 +11,22 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <ListView
-            android:id="@+id/listView"
+        <EditText
+            android:id="@+id/ed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="ingredient" />
+
+        <Button
+            android:id="@+id/a"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/res"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </LinearLayout>

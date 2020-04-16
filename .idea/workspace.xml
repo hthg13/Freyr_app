@@ -14,7 +14,9 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31781dd9-ef25-4a42-b9f8-8c39c82b0ec4" name="Default Changelist" comment="" />
+    <list default="true" id="31781dd9-ef25-4a42-b9f8-8c39c82b0ec4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +26,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/freyr$FreyrApplication.ic" NAME="FreyrApplication Coverage Results" MODIFIED="1574170931249" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="DidillyDevice" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_3a_XL_API_R" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
