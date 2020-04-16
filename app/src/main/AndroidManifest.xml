@@ -43,7 +43,7 @@
                   android:label="Search"/>
         <activity android:name=".ui.Activities.IngredientSearchFinalPageActivity"
                   android:label="Search"/>
-        <activity android:name=".ui.Activities.IngredientOrTitleSearchActivity"
+        <activity android:name=".ui.Activities.IngredientOrTitleSearchFragment"
                   android:label="Search"/>
         <activity
             android:name=".MainActivity"

@@ -1,20 +1,29 @@
 package com.example.client.ui.Activities;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+
 import android.os.Bundle;
-import android.widget.LinearLayout;
+import android.text.NoCopySpan;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import com.example.client.R;
 import com.example.client.data.entities.Recipe;
 import com.example.client.ui.Activities.Adapters.RecyclerAdapterCookBook;
+import com.example.client.ui.notifications.NotificationsViewModel;
+import com.example.client.ui.signup_and_login.UserViewModel;
 import com.example.client.utilities.TokenStore;
 
 import java.util.ArrayList;
 
-public class CookBookActivity extends AppCompatActivity {
+public class CookBookActivity extends Fragment {
 
     private RecyclerView recyclerView;
     private RecyclerView.Adapter mAdapter;
@@ -22,18 +31,27 @@ public class CookBookActivity extends AppCompatActivity {
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+        //UserViewModel = ViewModelProviders.of(this).get(NotificationsViewModel.class);
+        View root = inflater.inflate(R.layout.activity_cook_book, container, false);
+
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cook_book);
-        
-        recyclerView = (RecyclerView) findViewById(R.id.recycler);
+
+        //setContentView(R.layout.activity_cook_book);
+
+        recyclerView = (RecyclerView) root.findViewById(R.id.recycler);
+
         recyclerView.setHasFixedSize(false);
 
-        layoutManager = new LinearLayoutManager(this);
+        layoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(layoutManager);
 
 
-        mAdapter = new RecyclerAdapterCookBook(TokenStore.getRecipes(),this);
+        mAdapter = new RecyclerAdapterCookBook(TokenStore.getRecipes(),getContext());
         recyclerView.setAdapter(mAdapter);
+
+        return root;
     }
+
 }

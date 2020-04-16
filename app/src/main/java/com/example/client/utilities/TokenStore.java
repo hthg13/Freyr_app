@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import com.example.client.data.entities.Recipe;
 import com.example.client.data.entities.User;
 
+
 import java.util.ArrayList;
 
 public class TokenStore {
@@ -17,7 +18,7 @@ public class TokenStore {
 
     public static String getToken(SharedPreferences sharedPreferences) {
         return sharedPreferences.getString(TOKEN,"");
-    };
+    }
 
     public static void storeToken(SharedPreferences sharedPreferences, String token) {
         SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -42,7 +43,6 @@ public class TokenStore {
     public static String getUserPw(SharedPreferences sharedPreferences){
         return sharedPreferences.getString(USER_PW, "");
     }
-
 
     public static void storeUser(SharedPreferences sharedPreferences, User user) {
         SharedPreferences.Editor editor = sharedPreferences.edit();

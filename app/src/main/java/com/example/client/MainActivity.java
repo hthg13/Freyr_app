@@ -9,8 +9,7 @@ import android.widget.Button;
 
 import com.example.client.ui.Activities.CookBookActivity;
 import com.example.client.ui.Activities.CreateRecipeActivity;
-import com.example.client.ui.Activities.IngredientOrTitleSearchActivity;
-import com.example.client.ui.Activities.IngredientSearchPageOneActivity;
+import com.example.client.ui.Activities.IngredientOrTitleSearchFragment;
 import com.example.client.ui.signup_and_login.LoginActivity;
 import com.example.client.ui.signup_and_login.SignupActivity;
 import com.example.client.ui.signup_and_login.SignupOrLoginActivity;
@@ -104,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
             button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent create = new Intent(MainActivity.this, IngredientOrTitleSearchActivity.class);
+                Intent create = new Intent(MainActivity.this, IngredientOrTitleSearchFragment.class);
                 MainActivity.this.startActivity(create);
             }
         });
@@ -118,6 +117,7 @@ public class MainActivity extends AppCompatActivity {
         // menu should be considered as top level destinations.
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications, R.id.navigation_profile)
+                //R.id.navigation_home,R.id.navigation_search, R.id.navigation_profile)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
