@@ -1,5 +1,6 @@
 package com.example.client.ui.Activities;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
@@ -18,6 +19,7 @@ import java.util.ArrayList;
 
 import com.example.client.MainActivity;
 import com.example.client.R;
+import com.example.client.data.entities.CookBook;
 import com.example.client.data.entities.Recipe;
 import com.example.client.ui.Activities.Adapters.RecyclerAdapterCookBook;
 import com.example.client.ui.Activities.Adapters.RecyclerAdapterCreateRecipe;
@@ -122,6 +124,7 @@ public class CreateRecipeActivity extends AppCompatActivity {
                 ingredients.clear();
                 mAdapter.notifyItemRangeRemoved(0,0);
                 mAdapter.notifyDataSetChanged();
+
             }
         });
 
