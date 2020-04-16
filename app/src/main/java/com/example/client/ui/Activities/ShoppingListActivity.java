@@ -91,8 +91,6 @@ public class ShoppingListActivity extends AppCompatActivity {
 
 
 
-
-
         mAdapter = new RecyclerAdapterCreateRecipe(ingredients, ShoppingListActivity.this);
         recyclerView.setAdapter(mAdapter);
 

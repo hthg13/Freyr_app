@@ -59,38 +59,6 @@ public class ProfileFragment extends Fragment {
         userPasswordView.setText(sessionUserPW);
         userIdView.setText(sessionuserID);
 
-        Button button = (Button)root.findViewById(R.id.cb);
-        //button.setVisibility(View.INVISIBLE);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent cookbook = new Intent(getActivity(), CookBookActivity.class);
-                ProfileFragment.this.startActivity(cookbook);
-            }
-
-
-        });
-
-        Button button2 = (Button)root.findViewById(R.id.cr);
-        //button2.setVisibility(View.INVISIBLE);
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent create = new Intent(getActivity(), CreateRecipeActivity.class);
-                ProfileFragment.this.startActivity(create);
-            }
-        });
-
-        Button button3 = (Button)root.findViewById(R.id.sl);
-        //button2.setVisibility(View.INVISIBLE);
-        button3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent create = new Intent(getActivity(), ShoppingListActivity.class);
-                ProfileFragment.this.startActivity(create);
-            }
-        });
-
         return root;
     }
 

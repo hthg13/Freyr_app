@@ -2,15 +2,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:id="@+id/navigation_options"
+        android:icon="@drawable/shoppinglist_18dp"
+        android:title="Options"/>
+
+    <item
         android:id="@+id/navigation_home"
         android:icon="@drawable/search_18dp"
         android:title="@string/title_search"/>
-
 
     <item
         android:id="@+id/navigation_profile"
         android:icon="@drawable/profile_circle_24px"
         android:title="@string/title_profile"/>
-
-
 </menu>

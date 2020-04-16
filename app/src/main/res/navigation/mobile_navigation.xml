@@ -6,6 +6,12 @@
     app:startDestination="@+id/navigation_home">
 
     <fragment
+        android:id="@+id/navigation_options"
+        android:name="com.example.client.ui.Activities.OptionFragment"
+        android:label="Options"
+        tools:layout="@layout/fragment_options" />
+
+    <fragment
         android:id="@+id/navigation_home"
         android:name="com.example.client.ui.Activities.IngredientOrTitleSearchFragment"
         android:label="@string/title_notifications"
