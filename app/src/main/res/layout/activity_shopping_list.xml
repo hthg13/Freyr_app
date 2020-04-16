@@ -17,13 +17,13 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="ingredient" />
+            android:text="item" />
 
         <Button
             android:id="@+id/a"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="Add item" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/res"
