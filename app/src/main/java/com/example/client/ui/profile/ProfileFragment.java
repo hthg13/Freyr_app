@@ -1,5 +1,6 @@
 package com.example.client.ui.profile;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -36,8 +37,9 @@ public class ProfileFragment extends Fragment {
 
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        mProfileViewModel = ViewModelProviders.of(this).get(UserViewModel.class);
+        mProfileViewModel = ViewModelProviders.of(ProfileFragment.this).get(UserViewModel.class);
         View root = inflater.inflate(R.layout.fragment_profile, container, false);
+
         mSharedPreferences = this.getActivity().getSharedPreferences(TOKEN_PREFERENCE, Context.MODE_PRIVATE);
 
         final TextView userNameView = root.findViewById(R.id.textView15);

@@ -12,6 +12,8 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
+
+import com.example.client.MainActivity;
 import com.example.client.R;
 import com.example.client.data.Repositories.UserRepository;
 import com.example.client.data.entities.User;
@@ -121,15 +123,8 @@ public class SignupActivity extends AppCompatActivity {
      */
     @Override
     public void onBackPressed() {
-        Intent activitySignupOrLogin = new Intent(this, SignupOrLoginActivity.class);
-        startActivityForResult(activitySignupOrLogin, SIGNUPORLOGIN_REQUEST_CODE);
-    }
-
-    @Override
-    public void onRestart() {
-        super.onRestart();
-        finish();
-        startActivity(getIntent());
+        Intent intent = new Intent(SignupActivity.this, MainActivity.class);
+        startActivity(intent);
     }
 
     private boolean doesNameExist(final String enteredUserName) {
