@@ -80,6 +80,16 @@ public class ProfileFragment extends Fragment {
             }
         });
 
+        Button button3 = (Button)root.findViewById(R.id.sl);
+        //button2.setVisibility(View.INVISIBLE);
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent create = new Intent(getActivity(), ShoppingListActivity.class);
+                ProfileFragment.this.startActivity(create);
+            }
+        });
+
         return root;
     }
 
