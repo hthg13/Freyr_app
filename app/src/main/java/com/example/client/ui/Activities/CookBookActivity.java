@@ -23,7 +23,7 @@ import com.example.client.utilities.TokenStore;
 
 import java.util.ArrayList;
 
-public class CookBookActivity extends Fragment {
+public class CookBookActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private RecyclerView.Adapter mAdapter;
@@ -31,27 +31,26 @@ public class CookBookActivity extends Fragment {
 
 
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
 
         //UserViewModel = ViewModelProviders.of(this).get(NotificationsViewModel.class);
-        View root = inflater.inflate(R.layout.activity_cook_book, container, false);
+       // View root = inflater.inflate(R.layout.activity_cook_book, container, false);
 
         super.onCreate(savedInstanceState);
 
-        //setContentView(R.layout.activity_cook_book);
+        setContentView(R.layout.activity_cook_book);
 
-        recyclerView = (RecyclerView) root.findViewById(R.id.recycler);
+        recyclerView = (RecyclerView) findViewById(R.id.recycler);
 
         recyclerView.setHasFixedSize(false);
 
-        layoutManager = new LinearLayoutManager(getContext());
+        layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
 
-        mAdapter = new RecyclerAdapterCookBook(TokenStore.getRecipes(),getContext());
+        mAdapter = new RecyclerAdapterCookBook(TokenStore.getRecipes(),this);
         recyclerView.setAdapter(mAdapter);
 
-        return root;
     }
 
 }
