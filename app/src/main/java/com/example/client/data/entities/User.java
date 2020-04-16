@@ -10,7 +10,6 @@ import com.example.client.data.entities.Schedule;
 import com.example.client.data.entities.ShoppingList;
 
 import java.util.ArrayList;
-import java.util.List;
 
 @Entity(tableName = "user_table")
 public class User {
@@ -26,9 +25,6 @@ public class User {
     private int mCookbookId;
     private int mScheduleId;
     private int mShoppingListId;
-
-    @Ignore
-    private ArrayList<Recipe> recipeList;
 
     public User(String userName, String password) {
         this.mUserName = userName;

@@ -5,7 +5,7 @@ import android.content.SharedPreferences;
 import com.example.client.data.entities.Recipe;
 import com.example.client.data.entities.User;
 
-import java.lang.reflect.Array;
+
 import java.util.ArrayList;
 
 public class TokenStore {
@@ -14,6 +14,7 @@ public class TokenStore {
     private final static String USER_ID = "USER_ID";
     private final static String USERNAME = "USER_NAME";
     private final static String USER_PW = "USER_PW";
+    private final static ArrayList<Recipe> rs= new ArrayList<>();
 
     public static String getToken(SharedPreferences sharedPreferences) {
         return sharedPreferences.getString(TOKEN,"");
@@ -61,4 +62,14 @@ public class TokenStore {
         editor.remove(USER_ID);
         editor.apply();
     }
+
+
+    public static void addRecipe(Recipe r){
+        rs.add(r);
+    }
+
+    public static ArrayList<Recipe> getRecipes(){
+        return rs;
+    }
+
 }

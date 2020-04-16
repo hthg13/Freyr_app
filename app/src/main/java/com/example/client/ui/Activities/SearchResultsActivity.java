@@ -7,9 +7,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.client.R;
 import com.example.client.data.entities.Recipe;
 import com.example.client.ui.Activities.Adapters.RecyclerAdapterSearch;
+import com.example.client.utilities.RecipeMapper;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 public class SearchResultsActivity extends AppCompatActivity {
@@ -28,17 +32,18 @@ public class SearchResultsActivity extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-        // Test data
-        String image = "https://i.imgur.com/DvpvklR.png";
-        Recipe las = new Recipe("Lasagna",1234,image );
-        Recipe burg = new Recipe("Burger",1345, image);
 
 
-        ArrayList<Recipe> a = new ArrayList<>();
-        a.add(las);
-        a.add(burg);
-        mAdapter = new RecyclerAdapterSearch(a,this);
+        ArrayList<Recipe> rs = new ArrayList<>();
+        Bundle b = this.getIntent().getExtras();
+        System.out.println();
+        if(b!=null)
+            rs = getIntent().getParcelableArrayListExtra("recipes");
+        System.out.println(rs.size());
+
+        mAdapter = new RecyclerAdapterSearch(rs,this);
         recyclerView.setAdapter(mAdapter);
+
 
     }
 }

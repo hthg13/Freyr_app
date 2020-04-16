@@ -40,6 +40,7 @@ public class RecyclerAdapterCookBook extends RecyclerView.Adapter<RecyclerAdapte
         ArrayList<Recipe> recipes;
         String[] images;
 
+
         public RecipeViewHolder(View v, Context c, ArrayList<Recipe> r, String[] i) {
             super(v);
 
@@ -54,8 +55,8 @@ public class RecyclerAdapterCookBook extends RecyclerView.Adapter<RecyclerAdapte
         @Override
         public void onClick(View v) {
             Intent recipeViewIntent= new Intent(this.context, RecipeViewActivity.class);
-            recipeViewIntent.putExtra("recipeImage", images[getAdapterPosition()]);
-            recipeViewIntent.putExtra("recipeTitle", recipes.get(getAdapterPosition()).getTitle());
+            recipeViewIntent.putExtra("recipe", recipes.get(getAdapterPosition()));
+            recipeViewIntent.putExtra("from","cb");
             this.context.startActivity(recipeViewIntent);
         }
     }
